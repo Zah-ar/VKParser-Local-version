@@ -36,7 +36,7 @@ class Router extends Loger
                 echo 'File '.basename($imgUrl).' not found!';
                 return false; 
             }
-            
+               
         $cFile = curl_file_create($imgUrl);
         $ch = curl_init($this->marketUploadServer); // создаем подключение
         $postData = [];
@@ -49,6 +49,11 @@ class Router extends Loger
         $json_html = curl_exec($ch);
         curl_close($ch);
         $json = json_decode($json_html, true);
+            if(!array_key_exists('photo', $json))
+            {
+                sleep(\common\components\VkParser\VkParser::TIMEOUT);
+                return false;        
+            }
         $img = $this->saveImg($json['server'], $json['photo'], $json['hash']);
         sleep(\common\components\VkParser\VkParser::TIMEOUT);
             if($img == false)
