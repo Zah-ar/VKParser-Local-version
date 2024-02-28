@@ -19,62 +19,29 @@ abstract class VkParserApi extends VkDbAPI
             $this->insertGoods($this->goods, $existGoods);
             $this->setDeleteGoods($this->goods, $existGoods);
     }
-   public function sendGoods()
+   public function getHash($good)
+   {
+        $good = $good['available'].$good['url'].$good['price'].$good['old_price'].$good['categoryId'].$good['picture'].$good['store'].$good['pickup'].$good['name'].$good['vendor'].$good['color'].$good['size'];
+        return md5($good.\common\components\VkParser\VkParser::DESCRIPTION);
+   }
+   public function sendGoods($action, $goods)
    {
       $this->VkGoodFormater =  new VkGoodFormater;
       $this->Router = new Router;
       $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);
-      //Удаление товаров
-      $goods = $this->getGoods('DELETE_GOODS', 0);  
-        if($goods)
+   }
+   public function deleteGood($good_id)
+   {
+        $this->Router = new Router;
+        $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);  
+        if($this->existGoodsItemids)
         {
-            do{
-                $lastID = $goods['last_id'];
-                    foreach($goods['data'] as $good)
-                    { 
-                        $this->Router->deleteGood($good);
-                        $this->deleteGood($good['good_id']);
-                        sleep(\common\components\VkParser\VkParser::TIMEOUT);
-                    }
-                $goods = $this->getGoods('DELETE_GOODS', $lastID);  
-            }while($goods);
-         
+            if(array_key_exists($good_id ,$this->existGoodsItemids))
+            {
+                $goodData = $this->Router->deleteGood($this->existGoodsItemids[$good_id]);
+                return $this->existGoodsItemids[$good_id];
+            }
         }
-        //обновление товаров
-      $goods = $this->getGoods('UPDATE_GOODS', 0);  
-      if($goods)
-      {
-          do{
-              $lastID = $goods['last_id'];
-                  foreach($goods['data'] as $good)
-                  { 
-                      $goodData = $this->VkGoodFormater->getGoodAnsw($this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, 'UPDATE_GOODS');
-                      $this->Router->sendGood($goodData, 'UPDATE_GOODS');
-                      $this->unsetUpdate($good['good_id']);
-                      sleep(\common\components\VkParser\VkParser::TIMEOUT);
-                  }
-              $goods = $this->getGoods('UPDATE_GOODS', $lastID);  
-          }while($goods);
-      }
-      //созданние товаров
-      $goods = $this->getGoods('CREATE_GOODS', 0);  
-        if($goods)
-        {
-            do{
-                $lastID = $goods['last_id'];
-                    foreach($goods['data'] as $good)
-                    { 
-                        $goodData = $this->VkGoodFormater->getGoodAnsw($this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, 'CREATE_GOODS');
-                        $this->setDebug($goodData);
-                        $item_id = $this->Router->sendGood($goodData, 'CREATE_GOODS');
-                        if(is_int($item_id))
-                        {
-                            $this->setItemid($good['good_id'], $item_id);
-                        }
-                        sleep(\common\components\VkParser\VkParser::TIMEOUT);
-                    }
-                $goods = $this->getGoods('CREATE_GOODS', $lastID);  
-            }while($goods);
-        }
+      return false;
    }
 }

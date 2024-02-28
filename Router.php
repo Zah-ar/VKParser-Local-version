@@ -139,7 +139,7 @@ class Router extends Loger
     
     public function deleteGood($good)
     {
-        $url = $this->VK_URL.'market.delete?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&item_id='.$good['item_id'];
+        $url = $this->VK_URL.'market.delete?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&item_id='.$good;
 
         $arrContextOptions = array(
             "ssl" => array(

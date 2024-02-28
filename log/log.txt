@@ -1324,3 +1324,3567 @@
 [22-02-2024 16:09:35] [Info]Goods sended...
 [22-02-2024 16:10:18] [Info] Goods received...
 [22-02-2024 16:10:39] [Info]Goods sended...
+[26-02-2024 14:53:18] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253145
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[26-02-2024 15:12:38] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253146
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[26-02-2024 15:12:39] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[26-02-2024 15:15:53] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253147
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[26-02-2024 15:15:53] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[26-02-2024 15:19:31] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253148
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[26-02-2024 15:19:31] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 10:46:33] [Error] One of the parameters specified was missing or invalid: photo is undefined
+[27-02-2024 10:46:38] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:33:26] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253177
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:33:26] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:37:46] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253178
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:37:46] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:39:25] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253179
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:39:25] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:42:05] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253180
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:42:05] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:46:28] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253181
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:46:28] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:47:50] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253182
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:47:50] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:48:09] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253183
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:48:09] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:49:39] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253184
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:49:39] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:49:58] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253185
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 11:49:58] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:13:05] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:13:05] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:14:37] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:14:37] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:18:43] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:18:43] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:18:48] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:18:48] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:20:23] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:20:23] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:21:33] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:21:33] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:22:12] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:22:12] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:24:47] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 12:24:47] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:07:54] [Error] One of the parameters specified was missing or invalid: photo is undefined
+[27-02-2024 13:07:59] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:08:14] [Error] One of the parameters specified was missing or invalid: photo is undefined
+[27-02-2024 13:08:19] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: name should be at least 4 letters length
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:56:55] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253216
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:57:05] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4ММА Black
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => L
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1043
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/33270/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1490
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253217
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt03
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:57:16] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Гимнастические кольца Absolute Weapon
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 85
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/29951/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253218
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => abwfig07
+                )
+
+            [9] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [10] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [11] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:57:27] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Компрессионные штаны Absolute Weapon
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => S
+    Камуфляж|Разноцветный|Серый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 34
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3003
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/27221/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 4290
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253219
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => abwpan01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:57:38] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Компрессионные штаны Absolute Weapon
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XS
+    Зеленый|Камуфляж|Разноцветный|Синий
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 34
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3003
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/27463/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 4290
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253220
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => abwpan02
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:57:48] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Мультифункциональный боксерский стенд Absolute Weapon
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => no difned
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 101
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 175000
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/43020/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253221
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => abwpaw03
+                )
+
+            [9] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [10] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [11] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:57:59] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Рашгард Absolute Weapon
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Серый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 4
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3003
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/27028/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 4290
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253222
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => abwrash01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:58:10] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Рашгард Absolute Weapon Camo
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => L
+    Зеленый|Разноцветный|Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 4
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3003
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/15443/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 4290
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253223
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => abwrash02
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 13:58:20] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Скакалка Adidas Speed Rope Plastic Handle
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => One size
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 114
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/6171/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253224
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => adltrope001
+                )
+
+            [9] => Array
+                (
+                    [key] => item_id
+                    [value] => 
+                )
+
+            [10] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [11] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 15:27:34] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 15:34:40] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 15:38:01] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 15:43:52] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[27-02-2024 15:44:47] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: item_id is undefined
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => 
+                    [value] => 
+                )
+
+            [3] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [4] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[28-02-2024 10:09:57] [Error] Array
+(
+    [error_code] => 1403
+    [error_msg] => Item not found
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Футболка 4MMA
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XXL
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 833
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/825/
+                )
+
+            [7] => Array
+                (
+                    [key] => old_price
+                    [value] => 1190
+                )
+
+            [8] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457253261
+                )
+
+            [9] => Array
+                (
+                    [key] => id
+                    [value] => 4mmashirt01
+                )
+
+            [10] => Array
+                (
+                    [key] => item_id
+                    [value] => 9174313
+                )
+
+            [11] => Array
+                (
+                    [key] => method
+                    [value] => market.edit
+                )
+
+            [12] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+

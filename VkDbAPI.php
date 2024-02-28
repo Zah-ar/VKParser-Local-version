@@ -34,15 +34,81 @@ abstract class VkDbAPI extends Loger
                 }
         return $result;
     }   
-    public function insertGoods($goods, $existGoods)
+    public function getGoodsUpdate($goods)
     {
-        $batchInsertArray = [];
         $updateGoods = [];
+        foreach($goods as $good)
+            {
+                if($this->existGoods)
+                {
+                    if(is_array($this->existGoodsHash))
+                    {
+                        if(array_key_exists($good['good_id'], $this->existGoodsHash))
+                        {
+                            $hash = $this->getHash($good);
+                                if($hash == $this->existGoodsHash[$good['good_id']])
+                                {
+                                    continue;
+                                }
+
+                        }
+                    }
+                    if(in_array($good['good_id'], $this->existGoods))
+                    {
+                        $updateGoods[] = $good;
+                    }
+                }
+            }
+        return $updateGoods;
+    }
+
+    public function getGoodsCreate($goods)
+    {
+        if(!$this->existGoods)
+        {
+           return $goods;
+         }
+         $craeteGoods = []; 
+         foreach($goods as $good)      
+         {
+            if(!in_array($good['good_id'], $this->existGoods))
+            {
+                $craeteGoods[] = $good; 
+            }
+         }
+        return $craeteGoods;
+    }
+    public function getGoodsDelete($goods)
+    {
+        if(!$this->existGoods) return false;
+        $deleteGoods = [];
+        $newGoodsIDs = [];
             foreach($goods as $good)
             {
-                if($existGoods)
+                $newGoodsIDs[] = $good['good_id'];
+            }
+            foreach($this->existGoods as $existGood)
+            {
+                if(!in_array($existGood, $newGoodsIDs))
                 {
-                    if(in_array($good['good_id'], $existGoods))
+                    $deleteGoods[] = $existGood;
+                }
+            }
+        if(count($deleteGoods) == 0) return false;  
+        return $deleteGoods;
+    }
+ 
+    public function insertGoods($goods)
+    {
+
+        $batchInsertArray = [];
+        $updateGoods = [];
+        
+            foreach($goods as $good)
+            {
+                if($this->existGoods)
+                {
+                    if(in_array($good, $this->existGoods))
                     {
                         $updateGoods[] = $good;
                         continue;
