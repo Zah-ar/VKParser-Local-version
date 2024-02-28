@@ -14,10 +14,10 @@ class VkController extends Controller
         $goodsModels->limit(1);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
-        $VKParser = new \common\components\VkParser\VkParser;
-        $VKParser->ACCESS_TOKEN = 'vk1.a.OnvrhdCxYpSZ2lO680Cru3pZUNwPB-bIRDiOgL86dirgpXzlLrr_OBrlqzyoGelNueJ72qGfXbHkiiBqP1QSScIgow4QvP8cAZ2P4TnZ4TytEsAj7OVa4valUNA8GBZZNJcYRLXMYyGXQzH6orcszi6HpwOM-kj69vNTP_iFBYSLs4jLYGzgTzWHPM7rft17FLD3IlErp9K_Kn5NnWlyhw';
-        $VKParser->GROUP_ID     = 223876149;
-        $VKParser->OWNER_ID     = -223876149;
+        $VKParser = new VkParser;
+        $VKParser->ACCESS_TOKEN = '****************';
+        $VKParser->GROUP_ID     = ******;
+        $VKParser->OWNER_ID     = -*****;
         $VKParser->Init();
         $goods = [];
         $i = 0;
