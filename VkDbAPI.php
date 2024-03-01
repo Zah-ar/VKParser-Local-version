@@ -258,7 +258,7 @@ abstract class VkDbAPI extends Loger
       $this->db->createCommand($answ)->execute();
       return;
     }
-    public function deleteGood($good_id)
+    public function deleteGood($VKParser, $good_id)
     {
       $answ = "DELETE FROM vk_goods WHERE (good_id = '".$good_id."' AND shop_id = ".$this->GROUP_ID.")";
       $this->db->createCommand($answ)->execute();

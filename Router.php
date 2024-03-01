@@ -9,6 +9,9 @@ class Router extends Loger
     private $ACCESS_TOKEN;
     private $GROUP_ID;
     private $OWNER_ID;
+    public  $sended;
+    public $promoAlbums;
+    
     public function init($VK_URL, $ACCESS_TOKEN, $GROUP_ID, $OWNER_ID)
     {
         $url = $VK_URL.'photos.getMarketUploadServer?access_token='.$ACCESS_TOKEN.'&v=5.131&group_id='.$GROUP_ID;
@@ -26,6 +29,7 @@ class Router extends Loger
         $this->ACCESS_TOKEN = $ACCESS_TOKEN;
         $this->GROUP_ID = $GROUP_ID;
         $this->OWNER_ID = $OWNER_ID;
+        $this->sended   = false;
         return;
     }
     
@@ -90,8 +94,9 @@ class Router extends Loger
             }
         return $json;
     }
-    public function sendGood($good, $action)
+    public function sendGood($VKParser, $good, $goodData, $action)
     {
+        $this->sended   = true;
         $sumbarket = 'add';
             if($action == 'UPDATE_GOODS')
             {
@@ -129,6 +134,10 @@ class Router extends Loger
                     if(array_key_exists('market_item_id', $json['response']))
                     {
                         $item_id = $json['response']['market_item_id'];
+                            if(array_key_exists('good_id', $goodData))
+                            {
+                                $VKParser->addToArray($goodData['good_id'], $item_id);
+                            }
                         return $json['response']['market_item_id'];
                     }
                 }
@@ -141,11 +150,10 @@ class Router extends Loger
                 }
                     
     }
-    
-    public function deleteGood($good)
+    public function deleteGood($VKParser,$good)
     {
+        $VKParser->deleteFromArray($good);
         $url = $this->VK_URL.'market.delete?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&item_id='.$good;
-
         $arrContextOptions = array(
             "ssl" => array(
                 "verify_peer" => false,
@@ -155,5 +163,107 @@ class Router extends Loger
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         return;
     }
-
+    private function getAlbum($name)
+    {
+        $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json_arr = json_decode($json_html);
+        if($json_arr->response->count == 0) return false;
+            foreach($json_arr->response->items as $item)
+            {
+                if(trim($name) ==  $item->title) return $item->id;
+            }
+        
+        return false;
+    }
+    private function getAlbums()
+    {
+        $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json_arr = json_decode($json_html);
+        if($json_arr->response->count == 0) return false;
+            foreach($json_arr->response->items as $item)
+            {
+                $albumIds[] = $item->id;
+            }
+        
+        return $albumIds;
+    }
+    public function deleteAlbums() 
+    {
+        $albums = $this->getAlbums();
+        if(!$albums) return false;
+            foreach($albums as $album)
+            {
+                $url = $this->VK_URL.'market.deleteAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&album_id='.$album;
+                $arrContextOptions = array(
+                    "ssl" => array(
+                        "verify_peer" => false,
+                        "verify_peer_name" => false,
+                    ),
+                );
+                $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+                $json = json_decode($json_html);
+            }
+        
+        return;
+    }   
+    public function deleteAlbum($name) 
+    {
+        $albumExist = $this->getAlbum($name);
+        if(!$albumExist) return false;
+        $url = $this->VK_URL.'market.deleteAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&album_id='.$albumExist;
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html);
+        return;
+    }   
+    public function craeateAlbum($name) 
+    {
+        /*$albumExist = $this->getAlbum($name);
+        if($albumExist) return $albumExist;*/
+        $url = $this->VK_URL.'market.addAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&title='.urlencode($name);
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html);
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        return $json->response->market_album_id;
+    }
+    public function addToAlbum($albums, $item_id)
+    {
+        $url = $this->VK_URL.'market.addToAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.13&owner_id='.$this->OWNER_ID.'&item_ids='.$item_id.'&v=5.131&album_ids='.implode(',', $albums);
+         $arrContextOptions = array(
+                        "ssl" => array(
+                            "verify_peer" => false,
+                            "verify_peer_name" => false,
+                        ),
+                    );
+         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+         $json = json_decode($json_html);
+         sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        return;
+    }
+    
 }

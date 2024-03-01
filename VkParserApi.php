@@ -21,7 +21,10 @@ abstract class VkParserApi extends VkDbAPI
     }
    public function getHash($good)
    {
+        $discount = false;
+        if(array_key_exists('discount', $good)) $discount = $good['discount'];
         $good = $good['available'].$good['url'].$good['price'].$good['old_price'].$good['categoryId'].$good['picture'].$good['store'].$good['pickup'].$good['name'].$good['vendor'].$good['color'].$good['size'];
+        //if($this->promoAlbums && $discount) $good .= $discount;
         return md5($good.\common\components\VkParser\VkParser::DESCRIPTION);
    }
    public function sendGoods($action, $goods)
@@ -30,7 +33,7 @@ abstract class VkParserApi extends VkDbAPI
       $this->Router = new Router;
       $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);
    }
-   public function deleteGood($good_id)
+   public function deleteGood($VKParser, $good_id)
    {
         $this->Router = new Router;
         $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);  
@@ -38,7 +41,7 @@ abstract class VkParserApi extends VkDbAPI
         {
             if(array_key_exists($good_id ,$this->existGoodsItemids))
             {
-                $goodData = $this->Router->deleteGood($this->existGoodsItemids[$good_id]);
+                $goodData = $this->Router->deleteGood($VKParser, $this->existGoodsItemids[$good_id]);
                 return $this->existGoodsItemids[$good_id];
             }
         }
