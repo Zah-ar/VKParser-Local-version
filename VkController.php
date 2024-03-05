@@ -14,11 +14,11 @@ class VkController extends SuperController
     {
         set_time_limit(0);
         $discounts = [];
-        $discounts[] = 1496;
+        $discounts[] = 1497;
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         $goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(3);
+        $goodsModels->limit(10);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -58,11 +58,11 @@ class VkController extends SuperController
                     $goods[$i]['picture']    =  \Yii::getAlias('@frontend') . '/web/media/images/'.$goodItem->images[0]->filename;
                     $goods[$i]['store']       = 1;
                     $goods[$i]['pickup']      = 1;
-                    $goods[$i]['name']        = $goodItem->title.'2';
+                    $goods[$i]['name']        = $goodItem->title.rand(0, 10);
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
-                    $goods[$i]['categoryes']   = $goodItem->categoryes;  
+                    $goods[$i]['categoryes']  = $goodItem->categoryes;  
                     $i++;
             }
             $VKParser->goods = $goods;
@@ -74,12 +74,6 @@ class VkController extends SuperController
                     ->groupBy('good_id');
             $goodIDs = $goodIDs->all();                             
             $VKParser->initGoods($goodIDs);
-                /*
-                if(($VKParser->promoAlbums || $VKParser->useCategoryes) && ($updateGoods || $createGoods))
-                {
-                    $albums = $VKParser->setDiscountsAndCategoryes();
-                    
-                }*/
                 $updateGoods = $VKParser->getGoodsUpdate($goods);
                 if(count($updateGoods) > 0)
                 {
@@ -133,7 +127,7 @@ class VkController extends SuperController
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
                 }
-                $VKParser->finish();
+             //   $VKParser->finish();
 
          echo 'All Done!';
         return; 

@@ -137,7 +137,9 @@ class Router extends Loger
                             if(array_key_exists('good_id', $goodData))
                             {
                                 $VKParser->addToArray($goodData['good_id'], $item_id);
-                            }
+                                sleep(\common\components\VkParser\VkParser::TIMEOUT);
+                                $this->setCategoryes($VKParser, $item_id);
+                            }     
                         return $json['response']['market_item_id'];
                     }
                 }
@@ -146,6 +148,7 @@ class Router extends Loger
                     /*$goodArr = explode('&', $good);
                     $arr = explode('=', $goodArr[count($goodArr) - 1]);
                     return $arr[1];*/
+                    $this->setCategoryes($VKParser,$good);
                     return;
                 }
                     
@@ -182,6 +185,28 @@ class Router extends Loger
         
         return false;
     }
+    public function initAlbums()
+    {
+        $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json_arr = json_decode($json_html);
+        if($json_arr->response->count == 0) return false;
+        $albums = [];
+            foreach($json_arr->response->items as $item)
+            {
+
+                $albums[md5($item->title)] = $item->id;
+            }
+        
+        return $albums;
+    }
+    
     private function getAlbums()
     {
         $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
@@ -199,7 +224,7 @@ class Router extends Loger
                 $albumIds[] = $item->id;
             }
         
-        return $albumIds;
+        return $json_arr->response->items;
     }
     public function deleteAlbums() 
     {
@@ -235,6 +260,21 @@ class Router extends Loger
         $json = json_decode($json_html);
         return;
     }   
+    public function deleteAlbumById($albumID) 
+    {
+        if(!is_int($albumID)) return;
+        $url = $this->VK_URL.'market.deleteAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&album_id='.$albumID;
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html);
+        return;
+    }   
+    
     public function craeateAlbum($name) 
     {
         /*$albumExist = $this->getAlbum($name);
@@ -265,5 +305,66 @@ class Router extends Loger
          sleep(\common\components\VkParser\VkParser::TIMEOUT);
         return;
     }
-    
+    private function setCategoryes($VKParser, $item_id)
+    {
+             
+            if(!is_int($item_id))
+            {
+                $arr = explode('&', $item_id);
+                $arr = ($arr[count($arr) - 1]);
+                $arr =  explode('=', $arr);
+                $item_id = $arr[count($arr) - 1];
+            }
+         if(!$VKParser->existGoodsItemids) return;
+         $good = false;
+           $existGoodsItemidsFlip = array_flip($VKParser->existGoodsItemids);
+            foreach($VKParser->existGoodsItemids as $item)
+            {
+                if($item == $item_id)
+                {
+                    $good = $item;
+                    break;
+                }
+            }
+            if(!$good) return;
+            if(!array_key_exists($good, $existGoodsItemidsFlip))return;
+            $good_id = $existGoodsItemidsFlip[$good];
+            foreach($VKParser->goods as $item)
+            {
+                $good = false;
+                    if($item['good_id'] == $good_id)
+                    {
+                        $good = $item;
+                        break;
+                    }
+            }
+            if(!$good) return;
+            $albums =  [];
+                if(array_key_exists('discount', $good))
+                {
+                    $discounts = explode('|', $good['discount']);
+                        foreach($discounts as $discount)
+                        {
+                            if(array_key_exists(md5($discount), $VKParser->vkAlbums))
+                            {
+                                $albums[] = $VKParser->vkAlbums[md5($discount)];
+                            }
+                        }
+                }
+
+                if(array_key_exists('categoryes', $good))
+                {
+                    $categoryes = explode('|', $good['categoryes']);
+                        foreach($categoryes as $category)
+                        {
+                            if(array_key_exists(md5($category), $VKParser->vkAlbums))
+                            {
+                                $albums[] = $VKParser->vkAlbums[md5($category)];
+                            }
+                        }
+                }
+                if(count($albums) == 0) return;
+                $this->addToAlbum($albums, $item_id);
+            return;
+    }
 }

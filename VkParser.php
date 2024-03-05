@@ -5,7 +5,9 @@ namespace common\components\VkParser;
 class VkParser extends VkParserApi
 {
     private $albums;
+    public $vkAlbums;
     public $categoryes;
+    public $goodCategoryes;
     public $useCategoryes;
     public $usePromocategoryes;
     public $existGoods;
@@ -31,6 +33,7 @@ class VkParser extends VkParserApi
         $this->VkGoodFormater    = new VkGoodFormater;
         $this->albums            = false; 
         $this->categoryes        = false; 
+        $this->goodCategoryes    = false;
         $this->useCategoryes     = false;
         $this->usePromocategoryes = false;
         $this->existGoodsHash    = false; 
@@ -73,6 +76,104 @@ class VkParser extends VkParserApi
         $this->existGoodsItemids = $existGoodsItemids;
         return;
     }
+    private function setAlbums()
+    {
+        $this->vkAlbums = $this->Router->initAlbums();
+            if(is_array($this->vkAlbums))
+            {
+                //Удаление старых альбомов
+                if(!$this->goodCategoryes)
+                {
+                    $this->Router->deleteAlbums();
+                    return;
+                }                
+                    if($this->vkAlbums)
+                    {
+                           $vkAlbumsFlip = array_flip($this->vkAlbums);
+                           //получаем хэш
+                           $goodCategoryesHash = [];
+                            foreach ($this->goodCategoryes as $item)
+                            {
+                                $goodCategoryesHash[] = md5($item);
+                            }
+                             foreach($vkAlbumsFlip as $item)
+                             {
+                                if(!in_array($item, $goodCategoryesHash))
+                                {
+                                    if(array_key_exists($item, $this->vkAlbums))
+                                    {
+                                        $this->Router->deleteAlbumById($this->vkAlbums[$item]);
+                                        unset($this->vkAlbums[$item]);
+                                    }
+                                }
+                             }  
+                    }
+            }
+            if($this->goodCategoryes)
+            {
+                //Создание новых альбомов
+                $albums = [];
+                    if($this->vkAlbums)
+                    {
+                        $albums = $this->vkAlbums;
+                    }
+                    foreach($this->goodCategoryes as $category)
+                    {
+                        if(array_key_exists(md5($category), $albums))
+                        {
+                            continue;
+                        }
+                        $albumID = $this->Router->craeateAlbum($category);
+                        $albums[md5($category)] = $albumID;
+                    }
+                $this->vkAlbums = $albums;
+                
+            }
+        
+        return;
+    }
+    private function initCategoryes()
+    {
+        if($this->useCategoryes || $this->usePromocategoryes)
+        {
+            $this->goodCategoryes = [];
+        }
+            foreach($this->goods as $good)
+            {
+                if($this->useCategoryes)
+                {
+                    if(!array_key_exists('categoryes', $good))
+                    {
+                        continue;
+                    }
+                    $categoryes = explode('|', $good['categoryes']);
+                    if(is_array($categoryes))
+                    {
+                        foreach ($categoryes as $category)
+                        {
+                        if(!in_array($category, $this->goodCategoryes)) $this->goodCategoryes[] = $category;
+                        }
+                    }
+                }
+                if($this->usePromocategoryes)
+                {
+                    if(!array_key_exists('discount', $good))
+                    {
+                        continue;
+                    }
+                    $categoryes = explode('|', $good['discount']);
+                    if(is_array($categoryes))
+                    {
+                        foreach ($categoryes as $category)
+                        {
+                            if(!in_array($category, $this->goodCategoryes)) $this->goodCategoryes[] = $category;
+                        }
+                    }
+                }
+            }
+            $this->setAlbums();
+       return;
+    }
     public function initGoods($goods)
     {
         if($goods == null) return;
@@ -84,10 +185,12 @@ class VkParser extends VkParserApi
                $goodsHash[$good['good_id']] = $good['hash'];
                $goodsItemids[$good['good_id']] = $good['item_id'];
                $goodIDs[] = $good['good_id'];
+               
             }
         $this->setExistGoods($goodIDs);    
         $this->setExistGoodsHash($goodsHash); 
         $this->setExistGoodsItemids($goodsItemids); 
+        $this->initCategoryes();        
         return;    
     }
     private function setDiscounts()
@@ -151,6 +254,7 @@ class VkParser extends VkParserApi
         if(!$this->Router->sended) return;
         if(!$this->useCategoryes) return;
         if(count($this->goods) == 0) return;
+        return;
         echo 'finish()';
         $this->setDiscountsAndCategoryes();
         $VkAlbums = new VkAlbums;
