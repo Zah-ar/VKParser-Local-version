@@ -176,6 +176,7 @@ class VkParser extends VkParserApi
     }
     public function initGoods($goods)
     {
+        $this->initCategoryes();        
         if($goods == null) return;
         $goodsHash = [];
         $goodsItemids = [];
@@ -190,7 +191,6 @@ class VkParser extends VkParserApi
         $this->setExistGoods($goodIDs);    
         $this->setExistGoodsHash($goodsHash); 
         $this->setExistGoodsItemids($goodsItemids); 
-        $this->initCategoryes();        
         return;    
     }
     private function setDiscounts()

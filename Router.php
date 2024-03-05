@@ -138,7 +138,7 @@ class Router extends Loger
                             {
                                 $VKParser->addToArray($goodData['good_id'], $item_id);
                                 sleep(\common\components\VkParser\VkParser::TIMEOUT);
-                                $this->setCategoryes($VKParser, $item_id);
+                                $this->setCategoryes($VKParser, $goodData['good_id'], $item_id);
                             }     
                         return $json['response']['market_item_id'];
                     }
@@ -305,41 +305,30 @@ class Router extends Loger
          sleep(\common\components\VkParser\VkParser::TIMEOUT);
         return;
     }
-    private function setCategoryes($VKParser, $item_id)
+    private function setCategoryes($VKParser, $good_id, $item_id = false)
     {
+        if(!$item_id)
+        {
+            $arr = explode('&', $good_id);
+            $item_id = $arr[9];
+            $item_idArr  = explode('=', $item_id);
+            $item_id = $item_idArr[count($item_idArr) - 1];
+            $existGoodsItemidsFlip = array_flip($VKParser->existGoodsItemids);
+            if(!array_key_exists($item_id, $existGoodsItemidsFlip)) return false;
+            $good_id = $existGoodsItemidsFlip[$item_id];
+        }
              
-            if(!is_int($item_id))
+        $good = false;
+            foreach($VKParser->goods as $item)
             {
-                $arr = explode('&', $item_id);
-                $arr = ($arr[count($arr) - 1]);
-                $arr =  explode('=', $arr);
-                $item_id = $arr[count($arr) - 1];
-            }
-         if(!$VKParser->existGoodsItemids) return;
-         $good = false;
-           $existGoodsItemidsFlip = array_flip($VKParser->existGoodsItemids);
-            foreach($VKParser->existGoodsItemids as $item)
-            {
-                if($item == $item_id)
+                if($item['good_id'] == $good_id)
                 {
                     $good = $item;
                     break;
                 }
             }
-            if(!$good) return;
-            if(!array_key_exists($good, $existGoodsItemidsFlip))return;
-            $good_id = $existGoodsItemidsFlip[$good];
-            foreach($VKParser->goods as $item)
-            {
-                $good = false;
-                    if($item['good_id'] == $good_id)
-                    {
-                        $good = $item;
-                        break;
-                    }
-            }
-            if(!$good) return;
-            $albums =  [];
+        if(!$good) return;
+        $albums =  [];
                 if(array_key_exists('discount', $good))
                 {
                     $discounts = explode('|', $good['discount']);

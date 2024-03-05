@@ -35,6 +35,7 @@ abstract class VkParserApi extends VkDbAPI
    }
    public function deleteGood($VKParser, $good_id)
    {
+    return;
         $this->Router = new Router;
         $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);  
         if($this->existGoodsItemids)
