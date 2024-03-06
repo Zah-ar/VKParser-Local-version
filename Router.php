@@ -23,7 +23,6 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html, true);
-        //echo '<pre>';print_r($json);echo'</pre>';
         $this->marketUploadServer = $json['response']['upload_url'];
         $this->VK_URL = $VK_URL;
         $this->ACCESS_TOKEN = $ACCESS_TOKEN;
@@ -53,6 +52,7 @@ class Router extends Loger
         $json_html = curl_exec($ch);
         curl_close($ch);
         $json = json_decode($json_html, true);
+        if(!is_array($json)) return;
             if(!array_key_exists('photo', $json))
             {
                 sleep(\common\components\VkParser\VkParser::TIMEOUT);
@@ -90,6 +90,7 @@ class Router extends Loger
             {
                 $this->setLog('[Error] '.$json['error']['error_msg']);
                 //echo $json['error']['error_msg'];
+                print_r($json['error']);
                 return false;
             }
         return $json;
@@ -104,7 +105,7 @@ class Router extends Loger
             }
         $cnt = 0;   
 
-            $url = $this->VK_URL.'market.'.$sumbarket.'/?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&'. $good; 
+            $url = $this->VK_URL.'market.'.$sumbarket.'/?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&'. $goodData; 
                     
             $arrContextOptions = array(
                 "ssl" => array(
@@ -112,6 +113,7 @@ class Router extends Loger
                     "verify_peer_name" => false,
                 ),
             );
+           /// echo $url;
             $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
             $json = json_decode($json_html, true);
                 if(array_key_exists('error', $json))
@@ -130,17 +132,17 @@ class Router extends Loger
                 }   
                 if($action  == 'CREATE_GOODS')
                 {
-                    
+                    //if(array_key_exists('response'))
                     if(array_key_exists('market_item_id', $json['response']))
                     {
                         $item_id = $json['response']['market_item_id'];
-                            if(array_key_exists('good_id', $goodData))
+                            if(array_key_exists('good_id', $good))
                             {
-                                $VKParser->addToArray($goodData['good_id'], $item_id);
+                                $VKParser->addToArray($good['good_id'], $item_id);
                                 sleep(\common\components\VkParser\VkParser::TIMEOUT);
-                                $this->setCategoryes($VKParser, $goodData['good_id'], $item_id);
+                                $this->setCategoryes($VKParser, $good['good_id'], $item_id);
                             }     
-                        return $json['response']['market_item_id'];
+                        return $item_id;
                     }
                 }
                 if($action == 'UPDATE_GOODS')
@@ -355,5 +357,79 @@ class Router extends Loger
                 if(count($albums) == 0) return;
                 $this->addToAlbum($albums, $item_id);
             return;
+    }
+    private function getNotesByText($text)
+    {
+        $url = $this->VK_URL.'wall.search?access_token='.$this->ACCESS_TOKEN.'&owner_id='.$this->OWNER_ID.'&v=5.131&query='.urlencode($text).'&count=1';
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html);
+        if($json->response->count != 0) return true;
+        return false;
+    }
+    private function sendNote($data)
+    {
+        if(array_key_exists('text', $data))
+        {
+            if($this->getNotesByText($data['text'])) return;
+        }
+        $url = $this->VK_URL.'wall.post?access_token='.$this->ACCESS_TOKEN.'&owner_id='.$this->OWNER_ID.'&v=5.131';
+        if(array_key_exists('text', $data))
+        {
+            $url .= '&message='.urlencode($data['text']);
+        }
+        if(array_key_exists('albumID', $data))
+        {
+            $attachments = 'market_album'.$this->OWNER_ID.'_'.$data['albumID'];
+            $url .= '&attachments='.$attachments;
+        }
+        if(array_key_exists('url', $data))
+        {
+            $attachments = $data['url']['protocol'].$data['url']['url'];
+            $url .= ','.$attachments;
+        }
+        
+        $arrContextOptions = array(
+                       "ssl" => array(
+                           "verify_peer" => false,
+                           "verify_peer_name" => false,
+                       ),
+                   );
+        echo $url;           
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html);
+        print_r($json);
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        return;
+    }
+    public function sendNotes($VKParser)
+    {
+        if(count($VKParser->promoPosts) == 0) return;
+            foreach($VKParser->promoPosts as $item)
+            {
+                $data = [];
+                if(array_key_exists('album', $item))
+                {
+                    $albumID = $VKParser->vkAlbums[md5($item['album'])];
+                    $data['albumID']  = $albumID;
+                }
+                if(array_key_exists('text', $item))
+                {
+                    $data['text'] = $item['text'];
+                }
+                if(array_key_exists('url', $item))
+                {
+
+                    $urlArr = explode('://', $item['url']);
+                    $data['url']['protocol'] = $urlArr[0];
+                    $data['url']['url']      = $urlArr[1];
+                }
+                if(count($data) > 0)
+                {
+                    $this->sendNote($data);
+                    sleep(\common\components\VkParser\VkParser::TIMEOUT);
+                }
+            }
+       
+        return;
     }
 }

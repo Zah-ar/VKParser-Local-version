@@ -10,11 +10,13 @@ class VkParser extends VkParserApi
     public $goodCategoryes;
     public $useCategoryes;
     public $usePromocategoryes;
+    public $useNotes;
     public $existGoods;
     public $existGoodsHash;
     public $existGoodsItemids;
     public $Router;
     public $VkGoodFormater;
+    public $promoPosts;
 
     const TIMEOUT = 5;
     const DESCRIPTION = '%size%
@@ -38,6 +40,8 @@ class VkParser extends VkParserApi
         $this->usePromocategoryes = false;
         $this->existGoodsHash    = false; 
         $this->existGoodsItemids = false;
+        $this->useNotes          = false; 
+        $this->promoPosts        = [];
         $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);
         return;
     }
@@ -247,6 +251,12 @@ class VkParser extends VkParserApi
         $result['categoryes'] = $this->setCategoryes();
         $res = array_merge($result['discounts'], $result['categoryes']);
         $this->albums = $res;
+        return;
+    }
+    public function sendNotes()
+    {
+        if(!$this->useNotes) return;
+        $this->Router->sendPost('Test  post');
         return;
     }
     public function finish()
