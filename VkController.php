@@ -18,7 +18,7 @@ class VkController extends SuperController
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         $goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(6);
+        $goodsModels->limit(8);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -34,6 +34,7 @@ class VkController extends SuperController
         $promoPosts[0]['album'] = 'К 8 марта! -30% на ВСЁ*';
         $promoPosts[0]['text']  = 'Текст промопоста';
         $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1498/';
+        $promoPosts[0]['image']   = \Yii::getAlias('@frontend') . '/web/media/images/5acc425c241cec23a1ad55059d8b527f.jpg';
         $VKParser->promoPosts = $promoPosts;
         $goods = [];
         $i = 0;
@@ -81,6 +82,8 @@ class VkController extends SuperController
                     ->groupBy('good_id');
             $goodIDs = $goodIDs->all();                             
             $VKParser->initGoods($goodIDs);
+            $VKParser->Router->sendNotes($VKParser);
+        
                 $updateGoods = $VKParser->getGoodsUpdate($goods);
                 if(count($updateGoods) > 0)
                 {
@@ -132,7 +135,7 @@ class VkController extends SuperController
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
                 }
-                $VKParser->Router->sendNotes($VKParser);
+                //$VKParser->Router->sendNotes($VKParser);      
              //   $VKParser->finish();
 
          echo 'All Done!';

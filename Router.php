@@ -370,31 +370,43 @@ class Router extends Loger
     {
         if(array_key_exists('text', $data))
         {
-            if($this->getNotesByText($data['text'])) return;
+          //  if($this->getNotesByText($data['text'])) return;
         }
         $url = $this->VK_URL.'wall.post?access_token='.$this->ACCESS_TOKEN.'&owner_id='.$this->OWNER_ID.'&v=5.131';
+        $attachmentsArr = [];
         if(array_key_exists('text', $data))
         {
             $url .= '&message='.urlencode($data['text']);
+            $attachmentsArr[] = 'message='.urlencode($data['text']);
         }
         if(array_key_exists('albumID', $data))
         {
             $attachments = 'market_album'.$this->OWNER_ID.'_'.$data['albumID'];
-            $url .= '&attachments='.$attachments;
+            $attachmentsArr[] = 'market_album'.$this->OWNER_ID.'_'.$data['albumID'];
+            //$url .= '&attachments='.$attachments;
+        }
+        if(array_key_exists('img', $data))
+        {
+            $attachments = 'photo'.$this->OWNER_ID.'_'.$data['img'];
+            $attachmentsArr[] = 'photo'.$this->OWNER_ID.'_'.$data['img'];
+           // $url .= '&attachments='.$attachments;
         }
         if(array_key_exists('url', $data))
         {
-            $attachments = $data['url']['protocol'].$data['url']['url'];
-            $url .= ','.$attachments;
+            $attachments = $data['url']['protocol'].'://'.$data['url']['url'];
+            $attachmentsArr[] =  $data['url']['protocol'].'://'.$data['url']['url'];
+         //   $url .= ','.$attachments;
         }
-        
+        if(count($attachmentsArr) > 0)
+        {
+            $url.= '&attachments='.implode(',', $attachmentsArr);
+        }
         $arrContextOptions = array(
                        "ssl" => array(
                            "verify_peer" => false,
                            "verify_peer_name" => false,
                        ),
-                   );
-        echo $url;           
+                   );          
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html);
         print_r($json);
@@ -404,6 +416,9 @@ class Router extends Loger
     public function sendNotes($VKParser)
     {
         if(count($VKParser->promoPosts) == 0) return;
+            $NoteRouter =  new NoteRouter;
+            $NoteRouter->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, -$this->OWNER_ID, $this->GROUP_ID);
+            
             foreach($VKParser->promoPosts as $item)
             {
                 $data = [];
@@ -416,6 +431,14 @@ class Router extends Loger
                 {
                     $data['text'] = $item['text'];
                 }
+                if(array_key_exists('image', $item))
+                {
+                    $img = $NoteRouter->sendImg($item['image']);
+                    if(is_int($img)) 
+                    {
+                        $data['img'] = $img;
+                    }
+                }
                 if(array_key_exists('url', $item))
                 {
 
@@ -425,11 +448,11 @@ class Router extends Loger
                 }
                 if(count($data) > 0)
                 {
-                    $this->sendNote($data);
-                    sleep(\common\components\VkParser\VkParser::TIMEOUT);
+                   $this->sendNote($data);
+                   sleep(\common\components\VkParser\VkParser::TIMEOUT);
                 }
             }
-       
+        
         return;
     }
 }
