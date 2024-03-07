@@ -67,6 +67,11 @@ class NoteRouter extends Loger
         $json_html = curl_exec($ch);
         curl_close($ch);
         $json = json_decode($json_html, true);
+            if(!array_key_exists('photo', $json))
+            {
+                $photos_list = json_decode($json['photos_list']);
+                $json['photo'] = $photos_list[0]->photo;
+            }   
         $img = $this->saveImg($json['server'], $json['photo'], $json['hash'], $json['photos_list']);
         if(array_key_exists('error', $img['response']))
         {

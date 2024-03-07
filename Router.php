@@ -311,7 +311,8 @@ class Router extends Loger
     {
         if(!$item_id)
         {
-            $arr = explode('&', $good_id);
+            if(is_array($good_id)) return;
+            $arr = explode('&', $good_id);  
             $item_id = $arr[9];
             $item_idArr  = explode('=', $item_id);
             $item_id = $item_idArr[count($item_idArr) - 1];
@@ -370,7 +371,7 @@ class Router extends Loger
     {
         if(array_key_exists('text', $data))
         {
-          //  if($this->getNotesByText($data['text'])) return;
+           //if($this->getNotesByText($data['text'])) return;
         }
         $url = $this->VK_URL.'wall.post?access_token='.$this->ACCESS_TOKEN.'&owner_id='.$this->OWNER_ID.'&v=5.131';
         $attachmentsArr = [];
@@ -409,7 +410,6 @@ class Router extends Loger
                    );          
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html);
-        print_r($json);
         sleep(\common\components\VkParser\VkParser::TIMEOUT);
         return;
     }
