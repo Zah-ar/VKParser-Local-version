@@ -1,24 +1,20 @@
 <?php
-namespace frontend\controllers;
 
-use Yii;
-use yii\base\InvalidParamException;
-use yii\web\BadRequestHttpException;
-use frontend\controllers\SuperController;
-use yii\helpers;
-use yii\helpers\Url;
+namespace console\controllers;
 
-class VkController extends SuperController
+use yii\console\Controller;
+
+class VkController extends Controller
 {
     public function actionRun()
     {
         set_time_limit(0);
         $discounts = [];
-        $discounts[] = 1497;
+        $discounts[] = 1499;
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         $goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(8);
+        $goodsModels->limit(5);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -31,8 +27,8 @@ class VkController extends SuperController
         $VKParser->useNotes = true;
         $promoPosts = [];
         $promoPosts[0] = [];
-        $promoPosts[0]['album'] = 'К 8 марта! -30% на ВСЁ*';
-        $promoPosts[0]['text']  = 'Текст промопоста';
+        $promoPosts[0]['album'] = '-40% на компрессионную одежду*';
+        $promoPosts[0]['text']  = 'Текст промопоста консоль';
         $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1498/';
         $promoPosts[0]['image']   = \Yii::getAlias('@frontend') . '/web/media/images/5acc425c241cec23a1ad55059d8b527f.jpg';
         $VKParser->promoPosts = $promoPosts;
@@ -70,7 +66,7 @@ class VkController extends SuperController
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
-                    $goods[$i]['categoryes']  = $goodItem->categoryes;  
+                    $goods[$i]['categoryes']  = $goodItem->categoryes; 
                     $i++;
             }
             $VKParser->goods = $goods;

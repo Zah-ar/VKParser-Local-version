@@ -131,7 +131,6 @@ class VkParser extends VkParserApi
                         $albums[md5($category)] = $albumID;
                     }
                 $this->vkAlbums = $albums;
-                
             }
         
         return;
@@ -178,8 +177,58 @@ class VkParser extends VkParserApi
             $this->setAlbums();
        return;
     }
+    private function checkData()
+    {
+        if(!$this->useCategoryes && !$this->usePromocategoryes) return false;
+        $albums = [];
+        if(is_array($this->promoPosts))
+        {
+            if(count($this->promoPosts) > 0)
+            {
+                foreach($this->goods as $good)
+                        {
+                            if(array_key_exists('discount', $good))
+                            {
+                                $discounts = explode('|', $good['discount']);
+                                foreach($discounts as $discount)
+                                {
+                                    if(!in_array($discount, $albums))
+                                    {
+                                        $albums[] = $discount;
+                                    }
+                                }   
+                            }
+                            if(array_key_exists('categoryes', $good))
+                            {
+                                $categoryes = explode('|', $good['categoryes']);
+                                foreach($categoryes as $category)
+                                {
+                                    if(!in_array($category, $albums))
+                                    {
+                                        $albums[] = $category;
+                                    }
+                                }   
+                            }
+                        }
+                foreach($this->promoPosts as $promoPost)
+                {
+                    if(array_key_exists('album', $promoPost))
+                    {
+                        if(!in_array($promoPost['album'], $albums)) return 'Ошибка! Альбом для поста "'.$promoPost['album'].'" не найден в категориях товаров. Добавьте его в элемет массива товаров  $goods[$i]["categoryes"] или "$goods[$i][discount]"' ;
+                    }
+                }
+            }
+        }
+        return false;
+    }
     public function initGoods($goods)
     {
+        $chek = $this->checkData();
+            if($chek)
+            {
+                echo $chek;
+                exit(0);
+            }
         $this->initCategoryes();        
         if($goods == null) return;
         $goodsHash = [];
@@ -220,7 +269,6 @@ class VkParser extends VkParserApi
     }
     private function setCategoryes()
     {
-        $categoryes = [];
         $this->categoryes = [];
             foreach($this->goods as $good)
             {
@@ -241,6 +289,7 @@ class VkParser extends VkParserApi
                 {
                   $this->categoryes[md5($category)] = $this->Router->craeateAlbum($category);
                 }
+                file_put_contents(__DIR__.'/'.__METHOD__.'.txt', print_r($this->categoryes,true));
          return $this->categoryes;
     } 
     public function setDiscountsAndCategoryes()

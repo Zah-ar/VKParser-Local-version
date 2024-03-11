@@ -424,8 +424,11 @@ class Router extends Loger
                 $data = [];
                 if(array_key_exists('album', $item))
                 {
-                    $albumID = $VKParser->vkAlbums[md5($item['album'])];
-                    $data['albumID']  = $albumID;
+                    if(array_key_exists(md5($item['album']), $VKParser->vkAlbums))
+                    {
+                        $albumID = $VKParser->vkAlbums[md5($item['album'])];
+                        $data['albumID']  = $albumID;
+                    }
                 }
                 if(array_key_exists('text', $item))
                 {
