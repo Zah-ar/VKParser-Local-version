@@ -157,8 +157,11 @@ class Router extends Loger
     }
     public function deleteGood($VKParser,$good)
     {
+
+        if(!array_key_exists($good, $VKParser->existGoodsItemids)) return;
+        $item_id =  $VKParser->existGoodsItemids[$good];
         $VKParser->deleteFromArray($good);
-        $url = $this->VK_URL.'market.delete?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&item_id='.$good;
+        $url = $this->VK_URL.'market.delete?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&item_id='.$item_id;
         $arrContextOptions = array(
             "ssl" => array(
                 "verify_peer" => false,

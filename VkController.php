@@ -14,7 +14,7 @@ class VkController extends Controller
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         $goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(5);
+        $goodsModels->limit(3);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -122,10 +122,9 @@ class VkController extends Controller
                 $deleteGoods = $VKParser->getGoodsDelete($goods);
                 if(count($deleteGoods) > 0 && $deleteGoods)
                 {
-                    
-                    foreach ($deleteGoods as $good)
+                    foreach($deleteGoods as $good)
                     {
-                        $VKParser->deleteGood($VKParser, $good);
+                        $VKParser->Router->deleteGood($VKParser, $good);
                         $answ = "DELETE FROM vk_goods WHERE (good_id = '".$good."' AND shop_id = ".$VKParser->GROUP_ID.")";
                         \Yii::$app->getDb()->createCommand($answ)->execute();                  
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
