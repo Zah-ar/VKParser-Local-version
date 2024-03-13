@@ -12,9 +12,9 @@ class VkController extends Controller
         $discounts = [];
         $discounts[] = 1499;
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
-        $goodsModels->byDiscountsgoods($discounts);
+        //$goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(3);
+        //$goodsModels->limit(5);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -27,7 +27,7 @@ class VkController extends Controller
         $VKParser->useNotes = true;
         $promoPosts = [];
         $promoPosts[0] = [];
-        $promoPosts[0]['album'] = '-40% на компрессионную одежду*';
+        //$promoPosts[0]['album'] = '-40% на компрессионную одежду*';
         $promoPosts[0]['text']  = 'Текст промопоста консоль';
         $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1498/';
         $promoPosts[0]['image']   = \Yii::getAlias('@frontend') . '/web/media/images/5acc425c241cec23a1ad55059d8b527f.jpg';
@@ -66,7 +66,21 @@ class VkController extends Controller
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
-                    $goods[$i]['categoryes']  = $goodItem->categoryes; 
+                    $categoryes = explode('|', $goodItem->categoryes);
+                    $goodCats = [];
+                    $goodCats[] = 'Каталог';
+                        foreach($categoryes as $category)
+                        {
+                            if($category == 'Одежджа' || $category == 'Экипировка' || $category == 'Футболки' || $category == 'Рашгарды' || mb_stripos($category, 'перчатки') !== false)
+                            {
+
+                                if(!in_array($category, $goodCats))
+                                {
+                                    $goodCats[] = $category;
+                                }
+                            }
+                        }
+                    $goods[$i]['categoryes']  = implode('|', $goodCats); 
                     $i++;
             }
             $VKParser->goods = $goods;

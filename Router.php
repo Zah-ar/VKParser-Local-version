@@ -280,7 +280,7 @@ class Router extends Loger
         return;
     }   
     
-    public function craeateAlbum($name) 
+    public function craeateAlbum($name, $iteration = 0) 
     {
         /*$albumExist = $this->getAlbum($name);
         if($albumExist) return $albumExist;*/
@@ -293,7 +293,23 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html);
-        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        //sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        //file_put_contents(__DIR__.'/bugs.txt', print_r(get_object_vars($json)['error']['error_code'], true));
+        /*file_put_contents(__DIR__.'/bugs.txt', print_r($json, true));
+        die();
+        return false;*/
+            if(array_key_exists('error', $json))
+            {
+                if(!get_object_vars($json)['error']['error_code'] == 6 || $iteration > 1) return false;
+                sleep(5 * \common\components\VkParser\VkParser::TIMEOUT);
+                return $this->craeateAlbum($name, 1);
+            }
+            sleep(\common\components\VkParser\VkParser::TIMEOUT);
+            if(array_key_exists('error', $json->response))
+            {
+                echo 'Слишком много категорий';
+                return false;
+            }
         return $json->response->market_album_id;
     }
     public function addToAlbum($albums, $item_id)

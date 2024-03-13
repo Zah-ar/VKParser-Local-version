@@ -19,6 +19,7 @@ class VkParser extends VkParserApi
     public $promoPosts;
 
     const TIMEOUT = 5;
+    const MAX_ALBUMS = 99;
     const DESCRIPTION = '%size%
     %color%
 
@@ -119,6 +120,11 @@ class VkParser extends VkParserApi
                 $albums = [];
                     if($this->vkAlbums)
                     {
+                        if(count($this->vkAlbums) > self::MAX_ALBUMS)
+                        {
+                            echo 'Ошибка! Слишком много категорий и акций. Максимальное количество '.self::MAX_ALBUMS;
+                            return;
+                        }
                         $albums = $this->vkAlbums;
                     }
                     foreach($this->goodCategoryes as $category)
@@ -128,6 +134,10 @@ class VkParser extends VkParserApi
                             continue;
                         }
                         $albumID = $this->Router->craeateAlbum($category);
+                        if(!$albumID)
+                        {
+                            return false;
+                        }
                         $albums[md5($category)] = $albumID;
                     }
                 $this->vkAlbums = $albums;
@@ -154,7 +164,7 @@ class VkParser extends VkParserApi
                     {
                         foreach ($categoryes as $category)
                         {
-                        if(!in_array($category, $this->goodCategoryes)) $this->goodCategoryes[] = $category;
+                           if(!in_array($category, $this->goodCategoryes)) $this->goodCategoryes[] = $category;
                         }
                     }
                 }
@@ -218,6 +228,10 @@ class VkParser extends VkParserApi
                     }
                 }
             }
+          if(count($albums) > self::MAX_ALBUMS)
+          {
+            return 'Ошибка! Слишком много категорий и акций. Максимальное количество: '.self::MAX_ALBUMS;
+          }  
         }
         return false;
     }
