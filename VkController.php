@@ -14,7 +14,7 @@ class VkController extends Controller
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         //$goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        //$goodsModels->limit(5);
+        $goodsModels->limit(2);
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -62,7 +62,7 @@ class VkController extends Controller
                     $goods[$i]['picture']    =  \Yii::getAlias('@frontend') . '/web/media/images/'.$goodItem->images[0]->filename;
                     $goods[$i]['store']       = 1;
                     $goods[$i]['pickup']      = 1;
-                    $goods[$i]['name']        = $goodItem->title;
+                    $goods[$i]['name']        = $goodItem->title.' '.rand(0, 5);
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
@@ -90,63 +90,48 @@ class VkController extends Controller
                     ->from('vk_goods')
                     ->where(['shop_id' => $VKParser->GROUP_ID])
                     ->groupBy('good_id');
-            $goodIDs = $goodIDs->all();                             
-            $VKParser->initGoods($goodIDs);
-            $VKParser->Router->sendNotes($VKParser);
-        
-                $updateGoods = $VKParser->getGoodsUpdate($goods);
-                if(count($updateGoods) > 0)
-                {
-                    foreach ($updateGoods as $good)
-                    {
-                        $goodData = $VKParser->VkGoodFormater->getGoodAnsw($VKParser->existGoodsItemids, $VKParser->Router, $good, $VKParser->GROUP_ID, $VKParser->OWNER_ID, $VKParser->ACCESS_TOKEN, 'UPDATE_GOODS');
-                            if(!$goodData)
-                            {
-                                continue;   
-                            }
-                        $VKParser->Router->sendGood($VKParser, $good, $goodData,  'UPDATE_GOODS');
-                        $hash = $VKParser->getHash($good);
-                        $answ = "UPDATE vk_goods SET hash = '".$hash."' WHERE (good_id = '".$good['good_id']."' AND shop_id = ".$VKParser->GROUP_ID.")";
-                        \Yii::$app->getDb()->createCommand($answ)->execute();
-                            /*if($albums)
-                            {   
-                                $VKParser->Router->addToAlbum($VKParser->useCategoryes, $albums, $good, 'UPDATE_GOODS');                
-                            }*/
-                        sleep(\common\components\VkParser\VKParser::TIMEOUT);
-                    }
-                }
-                $createGoods = $VKParser->getGoodsCreate($goods);
-                if(count($createGoods) > 0)    
-                {
-                    foreach ($createGoods as $good)
-                    {
-                        $goodData = $VKParser->VkGoodFormater->getGoodAnsw($VKParser->existGoodsItemids, $VKParser->Router, $good, $VKParser->GROUP_ID, $VKParser->OWNER_ID, $VKParser->ACCESS_TOKEN,  'CREATE_GOODS');
-                        //print_r($goodData);
-                        $itemID = $VKParser->Router->sendGood($VKParser, $good, $goodData,'CREATE_GOODS');
-                            if(is_int($itemID))
-                            {
-                                $hash = $VKParser->getHash($good);
-                                $answ = "INSERT INTO vk_goods (id, good_id, hash, shop_id, item_id) VALUES('NULL', '".$good['good_id']."', '".$hash."', ".$VKParser->GROUP_ID.", ".$itemID.")";
-                               \Yii::$app->getDb()->createCommand($answ)->execute();      
-                            }
-                        sleep(\common\components\VkParser\VKParser::TIMEOUT);
-                    }
+            $goodIDs = $goodIDs->all();    
 
-                }
-                $deleteGoods = $VKParser->getGoodsDelete($goods);
-                if(count($deleteGoods) > 0 && $deleteGoods)
+            $result = $VKParser->startParsing($goodIDs);
+            
+            if(count($result) == 0) return;
+                if(array_key_exists('updated', $result))
                 {
-                    foreach($deleteGoods as $good)
+                    foreach($result['updated'] as $item)
                     {
-                        $VKParser->Router->deleteGood($VKParser, $good);
-                        $answ = "DELETE FROM vk_goods WHERE (good_id = '".$good."' AND shop_id = ".$VKParser->GROUP_ID.")";
-                        \Yii::$app->getDb()->createCommand($answ)->execute();                  
-                        sleep(\common\components\VkParser\VKParser::TIMEOUT);
+                        $answ = "UPDATE vk_goods SET hash = '".$item['hash']."' WHERE (good_id = '".$item['good_id']."' AND shop_id = ".$VKParser->GROUP_ID.")";
+                        \Yii::$app->getDb()->createCommand($answ)->execute();            
                     }
                 }
-                //$VKParser->Router->sendNotes($VKParser);      
-             //   $VKParser->finish();
-
+                if(array_key_exists('created', $result))
+                {
+                    $batchArr = [];
+                    foreach($result['created'] as $item)
+                    {
+                        $batchArr[] = array(
+                                'id'      => null,
+                                'good_id' => $item['good_id'],
+                                'hash'    => $item['hash'],
+                                'shop_id' => $item['shop_id'],
+                                'item_id' => $item['item_id']
+                        );
+                    }
+                    if(count($batchArr) > 0)
+                    {
+                        \Yii::$app->db->createCommand()->batchInsert('vk_goods', ['id','good_id','hash','shop_id', 'item_id'], $batchArr)->execute();
+                    }
+                }
+                if(array_key_exists('deleted', $result))
+                {
+                    $goodIDs = [];
+                    foreach($result['deleted'] as $item)
+                    {
+                        $goodIDs[] = "'".$item['good_id']."'";
+                    }
+                    $goodIDs = implode(',', $goodIDs);
+                    $answ = "DELETE FROM vk_goods WHERE (good_id IN(".$goodIDs.") AND shop_id = ".$VKParser->GROUP_ID.")";
+                    \Yii::$app->getDb()->createCommand($answ)->execute();  
+                }
          echo 'All Done!';
         return; 
     }
