@@ -14,7 +14,8 @@ class VkController extends Controller
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         //$goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(2);
+        $goodsModels->limit(5);
+        //$goodsModels->orderBy('good.id desc');
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
@@ -62,7 +63,7 @@ class VkController extends Controller
                     $goods[$i]['picture']    =  \Yii::getAlias('@frontend') . '/web/media/images/'.$goodItem->images[0]->filename;
                     $goods[$i]['store']       = 1;
                     $goods[$i]['pickup']      = 1;
-                    $goods[$i]['name']        = $goodItem->title.' '.rand(0, 5);
+                    $goods[$i]['name']        = $goodItem->title;
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
@@ -99,7 +100,7 @@ class VkController extends Controller
                 {
                     foreach($result['updated'] as $item)
                     {
-                        $answ = "UPDATE vk_goods SET hash = '".$item['hash']."' WHERE (good_id = '".$item['good_id']."' AND shop_id = ".$VKParser->GROUP_ID.")";
+                        $answ = "UPDATE `vk_goods` SET hash = '".$item['hash']."' WHERE (`good_id` = '".$item['good_id']."' AND `shop_id` = ".$VKParser->GROUP_ID.")";
                         \Yii::$app->getDb()->createCommand($answ)->execute();            
                     }
                 }
@@ -129,7 +130,7 @@ class VkController extends Controller
                         $goodIDs[] = "'".$item['good_id']."'";
                     }
                     $goodIDs = implode(',', $goodIDs);
-                    $answ = "DELETE FROM vk_goods WHERE (good_id IN(".$goodIDs.") AND shop_id = ".$VKParser->GROUP_ID.")";
+                    $answ = "DELETE FROM `vk_goods` WHERE (good_id IN(".$goodIDs.") AND `shop_id` = ".$VKParser->GROUP_ID.")";
                     \Yii::$app->getDb()->createCommand($answ)->execute();  
                 }
          echo 'All Done!';

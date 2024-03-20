@@ -20541,3 +20541,3358 @@
 
 )
 
+[19-03-2024 08:21:34] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Магнезия Be First 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => no difned
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 118
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 280
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/38440/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => beffig08
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 08:21:49] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Компрессионные штаны Booster Goblins Gbok And Zok 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => L
+    Желтый|Зеленый|Разноцветный|Серый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 34
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 5690
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/26628/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => boopan01
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 08:50:59] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Тренировочные перчатки Cleto Reyes E600 Tiger Orange 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 12унц.
+    Оранжевый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 43
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 35900
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/47407/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => clrboxglove012
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 09:16:17] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Гелевые накладки на руки Everlast 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => m
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 118
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 2490
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/45490/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => evebin021
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 09:27:19] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Боксерский мешок Everlast Ali Canvas 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 101
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 19900
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/27098/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => evepaw017
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 09:28:52] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Боксерки Everlast High Top Boxing Shoe 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 40,5
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 123
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 7700
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/35299/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => evesho02
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 10:30:04] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Перчатки Fairtex FGV15 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => l
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 47
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 9970
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/49637/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => faiglove033
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 11:17:46] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Женская тренировочная футболка Fight Nights 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => M
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 21
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/11926/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => fnsshirt026
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 11:18:02] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Топик Fight Nights Camo 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => S
+    Камуфляж
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 22
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 2890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/11891/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => fnswbra01
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 11:27:20] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кимоно Gameness Air 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => A4
+    Белый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 63
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 16890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/30052/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => gambjjk03
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 11:36:14] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Жимовые перчатки Green Hill WLG-6400 2
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => s
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 118
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/47581/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => grhfig01
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 11:36:29] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Жимовые перчатки Green Hill WLG-6406 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => m
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 118
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 690
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/47585/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => grhfig02
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 11:43:13] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Шорты для самбо Green Hill Мастер Red 2
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 60
+    Красный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 194
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 790
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/46849/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => grhsamsho01
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 13:37:08] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Женские шорты Hayabusa Mid Rise Layered Shorts 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => s
+    Оливковый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 11890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/46309/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457261743
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => hayshorts0177
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 13:39:06] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Шорты Hayabusa Kickboxing 2.0 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => L
+    Синий
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 8
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 8490
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/12487/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => hayshorts090
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 19:12:29] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Компрессионные шорты Hardcore Training Heraldry Magenta 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => xl
+    Разноцветный|Темно-фиолетовый|Фиолетовый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 4890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/46096/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457262520
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => hctshorts0205
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 19:13:10] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Компрессионные шорты Hardcore Training Heraldry Blue 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => s
+    Голубой|Разноцветный|Синий
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 4890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/46088/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457262522
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => hctshorts0207
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 19:19:54] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Компрессионные шорты Hardcore Training Heraldry Brown 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => xs
+    Коричневый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 5290
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/49350/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457262538
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => hctshorts0225
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 20:57:34] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Тренерская подушка Leone Power Line GM430 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+Черный
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 72
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 12900
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/35270/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => leopaw021
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 21:17:38] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Шапка Manto White 2
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+Белый
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 39
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 2290
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/34527/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => mancap01
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 22:53:08] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => МMA перчатки PunchTown Ryushin 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => S
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 129
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 4250
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/26545/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => punglove015
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:34:44] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Боксерская груша Rival Maize Balls S 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => no difned
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 101
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 27790
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/49405/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rivpaw015
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:43:12] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Защита голени Rocktape черный 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => S
+    Белый|Разноцветный|Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 51
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/889/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocbprshin4010
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:43:28] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кинезио тейп Rocktape 5см×5м Black 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => One size
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 107
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/1023/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig01
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:43:43] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кинезио тейп RockTape 5*5 Корова 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 107
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1090
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/33401/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig018
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:44:24] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кинезио тейп Rocktape Classic 5см×5м телесный 2
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+Бежевый|Коричневый|Разноцветный
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 107
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/22128/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig020
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:44:39] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кинезио тейп RockTape 5*5 розовый 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => 
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 118
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1090
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/33398/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig023
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:44:55] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кинезио тейп RockTape British flag 5см×5м 0
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => One size
+    Красный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 107
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 940
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/12478/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig03
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:45:36] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Водостойкий Кинезио тейп Rocktape H2O телесный 5см×5м 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => One size
+    Бежевый|Коричневый|Разноцветный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 107
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1090
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/2324/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig042
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:46:17] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Кинезио тейп RockTape 5*5 Розовый Камуфляж 0
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => no difned
+    Камуфляж|Разноцветный|Розовый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 118
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1090
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/46251/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocfig061
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:46:32] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Наколенники Rocktape Assassins manifesto 7мм 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XS
+    Белый|Разноцветный|Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 54
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3390
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/3054/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocprnk0017
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[19-03-2024 23:50:14] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Наколенники Rocktape KneeCaps manifesto 7мм 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XS
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 54
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 2990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/902/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => rocprnk04
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 00:46:47] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Термопояс Sweet Sweat 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => Желтый
+
+
+
+Для заказа пишите https://vk.com/club223876149 или звоните:
+8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 108
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 2690
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/29908/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => swsafat018
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 00:47:28] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Детский пояс для БЖЖ Tatami 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => M0
+    Желтый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 62
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1390
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/30252/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => tatbjjbel03
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 00:47:44] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Детский пояс для БЖЖ Tatami 5
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => M0
+    Зеленый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 62
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 1390
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/30253/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => tatbjjbel04
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 01:26:42] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Женские гибридные шорты-юбка Tyr Solid Della Skort 001 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => s
+    Черный
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3399
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/48543/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457263380
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => tyrshorts02
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 01:26:57] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Гибридные шорты Tyr Men`s Hydrospher Lined 7" Unbroken Big Logo 255 3
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => xl
+    Серый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 9199
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/49051/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457263381
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => tyrshorts03
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 01:51:31] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Женские компрессионные Штаны Under Armour Coldgear Armour Grey 1
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => XS
+    Серый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 36
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 4490
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/4710/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => undpan0004
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 01:52:12] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Тренировочная футболка Under Armour Tech 2 0
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => s
+    Серый
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 23
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 3870
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/38741/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => undshirt027
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 01:55:02] [Error] Array
+(
+    [error_code] => 100
+    [error_msg] => One of the parameters specified was missing or invalid: market_item_validation-need-main_photo_id
+    [error_text] => Необходимо главное изображение товара
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Рашгард Vansydical Lightning 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => L
+    синий с белым
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 4
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 2990
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/27117/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => vanrash08
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+
+[20-03-2024 03:34:19] [Error] Array
+(
+    [error_code] => 15
+    [error_msg] => Access denied: services not enabled
+    [request_params] => Array
+        (
+            [0] => Array
+                (
+                    [key] => v
+                    [value] => 5.131
+                )
+
+            [1] => Array
+                (
+                    [key] => owner_id
+                    [value] => -223876149
+                )
+
+            [2] => Array
+                (
+                    [key] => name
+                    [value] => Женские шорты Virus Cool Jade ECO22 4
+                )
+
+            [3] => Array
+                (
+                    [key] => description
+                    [value] => S
+    Синий
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)
+                )
+
+            [4] => Array
+                (
+                    [key] => category_id
+                    [value] => 12
+                )
+
+            [5] => Array
+                (
+                    [key] => price
+                    [value] => 4890
+                )
+
+            [6] => Array
+                (
+                    [key] => url
+                    [value] => https://4mma.ru/good/27140/
+                )
+
+            [7] => Array
+                (
+                    [key] => main_photo_id
+                    [value] => 457263675
+                )
+
+            [8] => Array
+                (
+                    [key] => id
+                    [value] => virshorts032
+                )
+
+            [9] => Array
+                (
+                    [key] => method
+                    [value] => market.add
+                )
+
+            [10] => Array
+                (
+                    [key] => oauth
+                    [value] => 1
+                )
+
+        )
+
+)
+

@@ -237,6 +237,7 @@ class Router extends Loger
         if(!$albums) return false;
             foreach($albums as $album)
             {
+                if(!is_int($album)) $album = $album->id;
                 $url = $this->VK_URL.'market.deleteAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&album_id='.$album;
                 $arrContextOptions = array(
                     "ssl" => array(

@@ -381,7 +381,7 @@ class VkParser extends VkParserApi
                             $i++;
                         }
                     }
-                        
+                
        $this->Router->sendNotes($this);             
         return $result;
     }
