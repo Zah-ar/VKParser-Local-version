@@ -17,7 +17,8 @@ class VkParser extends VkParserApi
     public $Router;
     public $VkGoodFormater;
     public $promoPosts;
-
+    public $userClass;
+    public $endpoint;
     const TIMEOUT = 5;
     const MAX_ALBUMS = 99;
     const DESCRIPTION = '%size%
@@ -323,11 +324,9 @@ class VkParser extends VkParserApi
         $updateGoods = $this->getGoodsUpdate($this->goods);
                 if(count($updateGoods) > 0)
                 {
-                    $result['updated'] = [];
-                    $i = 0;
                     foreach ($updateGoods as $good)
                     {
-                        $result['updated'][$i] = [];
+                        $result = [];
                         $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, 'UPDATE_GOODS');
                             if(!$goodData)
                             {
@@ -335,16 +334,17 @@ class VkParser extends VkParserApi
                             }
                         $this->Router->sendGood($this, $good, $goodData,  'UPDATE_GOODS');
                         $hash = $this->getHash($good);
-                        $result['updated'][$i]['good_id'] =  $good['good_id'];
-                        $result['updated'][$i]['hash']    =  $hash;
+                        $result['action'] = 'UPDATE_GOODS';
+                        $result['good_id'] =  $good['good_id'];
+                        $result['shop_id'] =  $this->GROUP_ID;
+                        $result['hash']    =  $hash;
+                        call_user_func($this->userClass.'::'.$this->endpoint, $result);
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
-                        $i++;
                     }
                 }
                 $createGoods = $this->getGoodsCreate($this->goods);
                 if(count($createGoods) > 0)    
                 {
-                    $result['created'] = [];
                     $i = 0;
                     foreach ($createGoods as $good)
                     {
@@ -356,13 +356,14 @@ class VkParser extends VkParserApi
                         $itemID = $this->Router->sendGood($this, $good, $goodData,'CREATE_GOODS');
                             if(is_int($itemID))
                             {
+                                $result= [];
                                 $hash = $this->getHash($good);
-                                $result['creared'][$i] = [];
-                                $result['created'][$i]['good_id'] =  $good['good_id'];
-                                $result['created'][$i]['hash']    =  $hash;
-                                $result['created'][$i]['shop_id'] =  $this->GROUP_ID;
-                                $result['created'][$i]['item_id'] =  $itemID;
-                                $i++;
+                                $result['action'] = 'CREATE_GOODS';
+                                $result['good_id'] =  $good['good_id'];
+                                $result['hash']    =  $hash;
+                                $result['shop_id'] =  $this->GROUP_ID;
+                                $result['item_id'] =  $itemID;
+                                call_user_func($this->userClass.'::'.$this->endpoint, $result);
                             }
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
@@ -370,15 +371,15 @@ class VkParser extends VkParserApi
                 $deleteGoods = $this->getGoodsDelete($this->goods);
                     if(count($deleteGoods) > 0 && $deleteGoods)
                     {
-                        $result['deleted'] = [];
-                        $i = 0;
+                        $result = [];
                         foreach($deleteGoods as $good)
                         {
                             $this->Router->deleteGood($this, $good);
-                            $result['deleted'][$i] = [];
-                            $result['deleted'][$i]['good_id'] = $good;
+                            $result['action'] = 'DELETE_GOODS';
+                            $result['good_id'] = $good;
+                            $result['shop_id'] =  $this->GROUP_ID;
+                            call_user_func($this->userClass.'::'.$this->endpoint, $result);
                             sleep(\common\components\VkParser\VKParser::TIMEOUT);
-                            $i++;
                         }
                     }
                 
