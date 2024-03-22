@@ -89,8 +89,7 @@ class Router extends Loger
             if(array_key_exists('error', $json))
             {
                 $this->setLog('[Error] '.$json['error']['error_msg']);
-                //echo $json['error']['error_msg'];
-                print_r($json['error']);
+                $this->setLog('[Error] '.print_r($json['error'],true));
                 return false;
             }
         return $json;
@@ -113,26 +112,21 @@ class Router extends Loger
                     "verify_peer_name" => false,
                 ),
             );
-           /// echo $url;
             $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
             $json = json_decode($json_html, true);
                 if(array_key_exists('error', $json))
                 {
-                    //$this->setDebug($json['error']);
                     $this->setLog('[Error] '.print_r($json['error'],true));
                     return false;
                 }
-            //echo '<pre>'; print_r($json); echo '<pre>';
                 if(array_key_exists('error', $json))
                 {
-                    //print_r($json['error'], false);
                     $this->setLog('[Error] '.print_r($json['error'],true));
                     sleep(\common\components\VkParser\VkParser::TIMEOUT);
                     $this->setLog('Goods received...');
                 }   
                 if($action  == 'CREATE_GOODS')
                 {
-                    //if(array_key_exists('response'))
                     if(array_key_exists('market_item_id', $json['response']))
                     {
                         $item_id = $json['response']['market_item_id'];
@@ -147,9 +141,6 @@ class Router extends Loger
                 }
                 if($action == 'UPDATE_GOODS')
                 {
-                    /*$goodArr = explode('&', $good);
-                    $arr = explode('=', $goodArr[count($goodArr) - 1]);
-                    return $arr[1];*/
                     $this->setCategoryes($VKParser,$good);
                     return;
                 }

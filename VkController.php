@@ -14,7 +14,7 @@ class VkController extends Controller
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         //$goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(3);
+        //$goodsModels->limit(3);
         //$goodsModels->orderBy('good.id desc');
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
@@ -30,9 +30,9 @@ class VkController extends Controller
         $VKParser->endpoint = 'endPoint';
         $promoPosts = [];
         $promoPosts[0] = [];
-        //$promoPosts[0]['album'] = '-40% на компрессионную одежду*';
+        $promoPosts[0]['album'] = '-30% на кофты, спортивные штаны, бейсболки и шапки*';
         $promoPosts[0]['text']  = 'Текст промопоста консоль';
-        $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1498/';
+        $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1504/';
         $promoPosts[0]['image']   = \Yii::getAlias('@frontend') . '/web/media/images/5acc425c241cec23a1ad55059d8b527f.jpg';
         $VKParser->promoPosts = $promoPosts;
         $goods = [];
