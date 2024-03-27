@@ -13,7 +13,7 @@
         {
             $txt  = '['.date('d-m-Y H:i:s', time()).'] ';
             $txt .= $message . PHP_EOL;
-           // file_put_contents($this->path, $txt, FILE_APPEND);
+            file_put_contents($this->path, $txt, FILE_APPEND);
             return;
         }
         public function setDebug($message)

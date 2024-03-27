@@ -19,11 +19,14 @@ class VkParser extends VkParserApi
     public $promoPosts;
     public $userClass;
     public $endpoint;
-    public $description;
-    public $utm;
-
     const TIMEOUT = 5;
     const MAX_ALBUMS = 99;
+    const DESCRIPTION = '%size%
+    %color%
+
+    
+    Для заказа пишите https://vk.com/club223876149 или звоните:
+    8-800-333-47-04 (бесплатно по России)';
 
     public function Init()
     {
@@ -41,7 +44,7 @@ class VkParser extends VkParserApi
         $this->existGoodsItemids = false;
         $this->useNotes          = false; 
         $this->promoPosts        = [];
-        $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID, $this->utm);
+        $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID);
         return;
     }
     private function setExistGoods($goods)
@@ -324,14 +327,13 @@ class VkParser extends VkParserApi
                     foreach ($updateGoods as $good)
                     {
                         $result = [];
-                        $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'UPDATE_GOODS');
-                        print_r($goodData);
+                        $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, 'UPDATE_GOODS');
                             if(!$goodData)
                             {
                                 continue;   
                             }
                         $this->Router->sendGood($this, $good, $goodData,  'UPDATE_GOODS');
-                        $hash = $this->getHash($good, $this->description);
+                        $hash = $this->getHash($good);
                         $result['action'] = 'UPDATE_GOODS';
                         $result['good_id'] =  $good['good_id'];
                         $result['shop_id'] =  $this->GROUP_ID;
@@ -350,12 +352,12 @@ class VkParser extends VkParserApi
                         {
                             continue;
                         }
-                        $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'CREATE_GOODS');
+                        $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN,  'CREATE_GOODS');
                         $itemID = $this->Router->sendGood($this, $good, $goodData,'CREATE_GOODS');
                             if(is_int($itemID))
                             {
                                 $result= [];
-                                $hash = $this->getHash($good, $this->description, $this->utm);
+                                $hash = $this->getHash($good);
                                 $result['action'] = 'CREATE_GOODS';
                                 $result['good_id'] =  $good['good_id'];
                                 $result['hash']    =  $hash;
@@ -365,7 +367,7 @@ class VkParser extends VkParserApi
                             }
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
-                }
+                }   
                 $deleteGoods = $this->getGoodsDelete($this->goods);
                     if(count($deleteGoods) > 0 && $deleteGoods)
                     {

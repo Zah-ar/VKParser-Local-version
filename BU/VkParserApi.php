@@ -19,14 +19,13 @@ abstract class VkParserApi extends VkDbAPI
             $this->insertGoods($this->goods, $existGoods);
             $this->setDeleteGoods($this->goods, $existGoods);
     }
-   public function getHash($good, $description, $utm)
+   public function getHash($good)
    {
         $discount = false;
         if(array_key_exists('discount', $good)) $discount = $good['discount'];
         $good = $good['available'].$good['url'].$good['price'].$good['old_price'].$good['categoryId'].$good['picture'].$good['store'].$good['pickup'].$good['name'].$good['vendor'].$good['color'].$good['size'];
-        if($utm) $good .= $utm;
         //if($this->promoAlbums && $discount) $good .= $discount;
-        return md5($good.$description);
+        return md5($good.\common\components\VkParser\VkParser::DESCRIPTION);
    }
    public function sendGoods($action, $goods)
    {

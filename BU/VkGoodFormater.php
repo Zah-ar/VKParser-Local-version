@@ -4,7 +4,7 @@ namespace common\components\VkParser;
 
 class VkGoodFormater extends VkParser
 {
-  public function getGoodAnsw($existGoodsItemids, $Rotuter, $good, $GROUP_ID, $OWNER_ID, $ACCESS_TOKEN, $description, $action)
+  public function getGoodAnsw($existGoodsItemids, $Rotuter, $good, $GROUP_ID, $OWNER_ID, $ACCESS_TOKEN, $action)
   {
         if($action == 'CREATE_GOODS')
         {
@@ -14,21 +14,16 @@ class VkGoodFormater extends VkParser
             $result = '';   
             $result  = 'owner_id='.$OWNER_ID;    
             $result .= '&name='.urlencode($good['name']);
-            $result .= '&description='.urlencode(\common\components\VkParser\GoodTemplate::getDescription($good, $description));
+            $result .= '&description='.urlencode(\common\components\VkParser\GoodTemplate::getDescription($good));
             $result .= '&category_id='.$good['categoryId'];
             $result .= '&price='.$good['price'];
             $result .= '&url='.$good['url'];
-            if($Rotuter->utm)
-              {
-                $result .= $Rotuter->utm;
-              }
                 if($good['old_price'] != 0)
                   {
                        $result .= '&old_price='.$good['old_price'];
                   }
                    $result .= '&main_photo_id='.$img;
                    $result .= '&id='.$good['good_id'];
-                   $result .= '&sku='.$good['good_id'];
             return $result;
         }
 
@@ -43,14 +38,10 @@ class VkGoodFormater extends VkParser
             $result = '';   
             $result  = 'owner_id='.$OWNER_ID;    
             $result .= '&name='.urlencode($good['name']);
-            $result .= '&description='.urlencode(\common\components\VkParser\GoodTemplate::getDescription($good, $description));
+            $result .= '&description='.urlencode(\common\components\VkParser\GoodTemplate::getDescription($good));
             $result .= '&category_id='.$good['categoryId'];
             $result .= '&price='.$good['price'];
             $result .= '&url='.$good['url'];
-            if($Rotuter->utm)
-              {
-                $result .= $Rotuter->utm;
-              }
                 if($good['old_price'] != 0)
                   {
                        $result .= '&old_price='.$good['old_price'];

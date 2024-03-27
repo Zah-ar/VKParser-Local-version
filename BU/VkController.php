@@ -14,39 +14,27 @@ class VkController extends Controller
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         //$goodsModels->byDiscountsgoods($discounts);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(100);
+        $goodsModels->limit(3);
         //$goodsModels->orderBy('good.id desc');
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
         $VKParser->ACCESS_TOKEN = 'vk1.a.OFzMAlQgGV5r11inRWeKJseBO4GoxbZ0wUoHXCdVsE9cds5UfCPf763arYQqyzR2IjvGrZVczmyX71uwREhb9__RdXzLu80DT1fV3iFO8vHNibXkeAwg9ZxNN-SzADf09WNo-e6PdtXfv_yOU7PEqBVxWgGp_3_AMcUd1x_E1nu71aEhWyVIk0t3PH1PTuYXzgvEUelAmQ_IK3JBIsRGTw';
-        $VKParser->utm = '%3Futm_source=vk.com%26utm_medium=VKontakte%26utm_campaign=vk_market';
-        /* Test */
         $VKParser->GROUP_ID     = 223876149;
         $VKParser->OWNER_ID     = -223876149;
-        /* Production */
-        /*$VKParser->GROUP_ID     = 19766478;
-        $VKParser->OWNER_ID     = -19766478;*/
         $VKParser->Init();
-        $VKParser->usePromocategoryes  = false;
-        $VKParser->useCategoryes = false;
-        $VKParser->useNotes = false;
+        $VKParser->usePromocategoryes  = true;
+        $VKParser->useCategoryes = true;
+        $VKParser->useNotes = true;
         $VKParser->userClass = '\console\controllers\VkController';
         $VKParser->endpoint = 'endPoint';
-        $VKParser->description = 
-        '
-        - Размер: %size%
-        - Цвет: %color%
-        
-        Для заказа пишите https://vk.com/club223876149 или звоните:
-        8-800-333-47-04 (бесплатно по России)';
-/*        $promoPosts = [];
+        $promoPosts = [];
         $promoPosts[0] = [];
-        $promoPosts[0]['album'] = '-30% на кофты, спортивные штаны, бейсболки и шапки*';
+        //$promoPosts[0]['album'] = '-40% на компрессионную одежду*';
         $promoPosts[0]['text']  = 'Текст промопоста консоль';
-        $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1504/';
+        $promoPosts[0]['url']   = 'https://4mma.ru/catalog/promo-1498/';
         $promoPosts[0]['image']   = \Yii::getAlias('@frontend') . '/web/media/images/5acc425c241cec23a1ad55059d8b527f.jpg';
-        $VKParser->promoPosts = $promoPosts;*/
+        $VKParser->promoPosts = $promoPosts;
         $goods = [];
         $i = 0;
             foreach ($goodsModels as $goodItem)
@@ -62,7 +50,7 @@ class VkController extends Controller
                 $goods[$i] = [];
                 $goods[$i]['good_id']    = $goodItem->code;
                 $goods[$i]['available']  = 1;
-                $goods[$i]['url']        = 'https://4mma.ru/good/'.$goodItem->id.'/'; 
+                $goods[$i]['url']        = 'https://4mma.ru/good/'.$goodItem->id.'/';
                 $goodPrice = $goodItem->getGoodricePublicDiscounts($goodItem->id, false, true);//Обновить метод
                     if($goodPrice != false)
                     {
@@ -73,11 +61,11 @@ class VkController extends Controller
                         $goods[$i]['old_price'] = 0;
                         $goods[$i]['price'] = $goodItem->price;
                     }
-                    $goods[$i]['categoryId']  =  $goodItem->category_ids[0];
-                    $goods[$i]['picture']     =  \Yii::getAlias('@frontend') . '/web/media/images/'.$goodItem->images[0]->filename;
+                    $goods[$i]['categoryId'] = $goodItem->category_ids[0];
+                    $goods[$i]['picture']    =  \Yii::getAlias('@frontend') . '/web/media/images/'.$goodItem->images[0]->filename;
                     $goods[$i]['store']       = 1;
                     $goods[$i]['pickup']      = 1;
-                    $goods[$i]['name']        = $goodItem->title;
+                    $goods[$i]['name']        = $goodItem->title.rand(0, 5);
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            

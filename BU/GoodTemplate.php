@@ -24,12 +24,11 @@ class GoodTemplate
             $result = str_replace('%color%', '', $result);
             $result = str_replace('  ', '', $result);
         }
-        $result = str_replace('%code%', $good['good_id'], $result);
         return;
     }
-    public function getDescription($good, $description)
+    public function getDescription($good)
     {
-        $result = $description;
+        $result = \common\components\VkParser\VkParser::DESCRIPTION;
         self::setUrl($result, $good);
         self::setParams($result, $good);
         return $result;
