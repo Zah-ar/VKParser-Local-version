@@ -21,6 +21,7 @@ class VkParser extends VkParserApi
     public $endpoint;
     public $description;
     public $utm;
+    public $albumCovers;
 
     const TIMEOUT = 5;
     const MAX_ALBUMS = 99;
@@ -40,6 +41,7 @@ class VkParser extends VkParserApi
         $this->existGoodsHash    = false; 
         $this->existGoodsItemids = false;
         $this->useNotes          = false; 
+        $this->albumCovers       = false;
         $this->promoPosts        = [];
         $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID, $this->utm);
         return;
@@ -79,9 +81,31 @@ class VkParser extends VkParserApi
         $this->existGoodsItemids = $existGoodsItemids;
         return;
     }
+    private function setAlbumCovers()
+    {
+        $albumCovers = [];
+            foreach($this->goods as $good)
+            {
+                if(!array_key_exists('categoryes', $good)) continue;
+                $categoryes = explode('|', $good['categoryes']);
+                    foreach($categoryes as $category)
+                    {
+                        if(!array_key_exists(md5($category), $albumCovers) && array_key_exists('picture', $good))
+                        {
+                            if(file_exists($good['picture']))
+                            {
+                                $albumCovers[md5($category)] = $good['picture'];
+                            }
+                        }
+                    }
+            }    
+        $this->albumCovers = $albumCovers;
+        return;
+    }
     private function setAlbums()
     {
-        $this->vkAlbums = $this->Router->initAlbums();
+        $this->setAlbumCovers();
+        $this->vkAlbums = $this->Router->initAlbums($this->albumCovers);
             if(is_array($this->vkAlbums))
             {
                 //Удаление старых альбомов
@@ -130,7 +154,7 @@ class VkParser extends VkParserApi
                         if(array_key_exists(md5($category), $albums))
                         {
                             continue;
-                        }
+                        } 
                         $albumID = $this->Router->craeateAlbum($category);
                         if(!$albumID)
                         {
@@ -282,6 +306,7 @@ class VkParser extends VkParserApi
     private function setCategoryes()
     {
         $this->categoryes = [];
+        $covers = [];
             foreach($this->goods as $good)
             {
                 if(array_key_exists('categoryes', $good))
@@ -294,6 +319,7 @@ class VkParser extends VkParserApi
                                 continue;
                             }
                             $categoryes[] = $category;
+                            $covers[md5($category)] = $good['picture'];
                         }
                 }
             }
@@ -301,7 +327,7 @@ class VkParser extends VkParserApi
                 {
                   $this->categoryes[md5($category)] = $this->Router->craeateAlbum($category);
                 }
-                file_put_contents(__DIR__.'/'.__METHOD__.'.txt', print_r($this->categoryes,true));
+                
          return $this->categoryes;
     } 
     public function setDiscountsAndCategoryes()
@@ -315,23 +341,22 @@ class VkParser extends VkParserApi
         return;
     }
     public function startParsing($goodIDs)
-    {
+    { 
         $result =[];
         $this->initGoods($goodIDs);
-        $updateGoods = $this->getGoodsUpdate($this->goods);
+        $updateGoods = $this->getGoodsUpdate($this->goods, $this->utm, $this->description);
                 if(count($updateGoods) > 0)
                 {
                     foreach ($updateGoods as $good)
                     {
                         $result = [];
                         $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'UPDATE_GOODS');
-                        print_r($goodData);
                             if(!$goodData)
                             {
                                 continue;   
                             }
                         $this->Router->sendGood($this, $good, $goodData,  'UPDATE_GOODS');
-                        $hash = $this->getHash($good, $this->description);
+                        $hash = $this->getHash($good, $this->description, $this->utm);
                         $result['action'] = 'UPDATE_GOODS';
                         $result['good_id'] =  $good['good_id'];
                         $result['shop_id'] =  $this->GROUP_ID;

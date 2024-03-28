@@ -9,10 +9,11 @@ class Router extends Loger
     private $ACCESS_TOKEN;
     private $GROUP_ID;
     private $OWNER_ID;
+    private $albumCovers;
     public $utm;
     public  $sended;
     public $promoAlbums;
-    
+
     public function init($VK_URL, $ACCESS_TOKEN, $GROUP_ID, $OWNER_ID, $utm)
     {
         $url = $VK_URL.'photos.getMarketUploadServer?access_token='.$ACCESS_TOKEN.'&v=5.131&group_id='.$GROUP_ID;
@@ -184,8 +185,9 @@ class Router extends Loger
         
         return false;
     }
-    public function initAlbums()
+    public function initAlbums($albumCovers)
     {
+        $this->albumCovers = $albumCovers;
         $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
         $arrContextOptions = array(
             "ssl" => array(
@@ -206,7 +208,7 @@ class Router extends Loger
         return $albums;
     }
     
-    private function getAlbums()
+    public function getAlbums()
     {
         $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
         $arrContextOptions = array(
@@ -217,6 +219,7 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json_arr = json_decode($json_html);
+        
         if($json_arr->response->count == 0) return false;
             foreach($json_arr->response->items as $item)
             {
@@ -274,12 +277,77 @@ class Router extends Loger
         $json = json_decode($json_html);
         return;
     }   
-    
+    private function loadAlbumcover($cover)
+    {
+        $url = $this->VK_URL.'photos.getMarketAlbumUploadServer?access_token='.$this->ACCESS_TOKEN.'&v=5.131&group_id='.$this->GROUP_ID;
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html, true);
+        $marketAlbumUploadServer = $json['response']['upload_url'];
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        if(!file_exists($cover))
+            {
+                echo 'File '.basename($cover).' not found!';
+                $this->setLog('[Error] '.print_r($json['error'],true));
+                return false; 
+            }     
+        $cFile = curl_file_create($cover);
+        $ch = curl_init($marketAlbumUploadServer); // создаем подключение
+        $postData = [];
+        $postData['file'] = $cFile;
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        $json_html = curl_exec($ch);
+        curl_close($ch);
+        $json = json_decode($json_html, true);
+        if(!is_array($json)) return;
+            if(!array_key_exists('photo', $json))
+            {
+                sleep(\common\components\VkParser\VkParser::TIMEOUT);
+                return false;        
+            }
+            if(array_key_exists('error', $json))
+            {
+                $this->setLog('[Error] '.print_r($json['error'],true));
+                return false;
+            }
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        $saveCoverUrl = $this->VK_URL.'photos.saveMarketAlbumPhoto?access_token='.$this->ACCESS_TOKEN.'&v=5.131&group_id='.$this->GROUP_ID.'&photo='.$json['photo'].'&server='.$json['server'].'&hash='.$json['hash']; 
+        $json_html = file_get_contents($saveCoverUrl, false, stream_context_create($arrContextOptions));
+        $json = json_decode($json_html, true);
+        if(array_key_exists('error', $json))
+        {
+            $this->setLog('[Error] '.$json['error']['error_msg']);
+            $this->setLog('[Error] '.print_r($json['error'],true));
+            return false;
+        }
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        return $json['response'][0]['id'];
+
+    }
     public function craeateAlbum($name, $iteration = 0) 
     {
         /*$albumExist = $this->getAlbum($name);
         if($albumExist) return $albumExist;*/
+        $albumCover = false;
+            if($this->albumCovers)
+            {
+                 if(array_key_exists(md5($name), $this->albumCovers))
+                 {
+                    $albumCover = $this->albumCovers[md5($name)];
+                    $photo_id = $this->loadAlbumcover($albumCover);
+                 } 
+            }   
         $url = $this->VK_URL.'market.addAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&title='.urlencode($name);
+            if($photo_id) $url .= '&photo_id='.$photo_id;
         $arrContextOptions = array(
             "ssl" => array(
                 "verify_peer" => false,
@@ -288,11 +356,6 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html);
-        //sleep(\common\components\VkParser\VkParser::TIMEOUT);
-        //file_put_contents(__DIR__.'/bugs.txt', print_r(get_object_vars($json)['error']['error_code'], true));
-        /*file_put_contents(__DIR__.'/bugs.txt', print_r($json, true));
-        die();
-        return false;*/
             if(array_key_exists('error', $json))
             {
                 if(!get_object_vars($json)['error']['error_code'] == 6 || $iteration > 1) return false;
@@ -307,6 +370,7 @@ class Router extends Loger
             }
         return $json->response->market_album_id;
     }
+    
     public function addToAlbum($albums, $item_id)
     {
         $url = $this->VK_URL.'market.addToAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.13&owner_id='.$this->OWNER_ID.'&item_ids='.$item_id.'&v=5.131&album_ids='.implode(',', $albums);

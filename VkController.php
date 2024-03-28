@@ -11,10 +11,12 @@ class VkController extends Controller
         set_time_limit(0);
         $discounts = [];
         $discounts[] = 1499;
+        $catsForAlbums = array(5, 6, 20, 21, 22, 8);
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         //$goodsModels->byDiscountsgoods($discounts);
+        $goodsModels->byCategory($catsForAlbums);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(100);
+        $goodsModels->limit(10);
         //$goodsModels->orderBy('good.id desc');
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
@@ -29,7 +31,7 @@ class VkController extends Controller
         $VKParser->OWNER_ID     = -19766478;*/
         $VKParser->Init();
         $VKParser->usePromocategoryes  = false;
-        $VKParser->useCategoryes = false;
+        $VKParser->useCategoryes = true;
         $VKParser->useNotes = false;
         $VKParser->userClass = '\console\controllers\VkController';
         $VKParser->endpoint = 'endPoint';
@@ -81,21 +83,25 @@ class VkController extends Controller
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
-                    $categoryes = explode('|', $goodItem->categoryes);
-                    $goodCats = [];
-                    $goodCats[] = 'Каталог';
-                        foreach($categoryes as $category)
+                    $CategoryGoods = \common\models\Shop\CategoryGood::find()->where(['and',['good_id' => $goodItem->id], ['is_dynamic' => 0], ['category_id' => $catsForAlbums]])->all();
+                        if($CategoryGoods != null)
                         {
-                            if($category == 'Одежджа' || $category == 'Экипировка' || $category == 'Футболки' || $category == 'Рашгарды' || mb_stripos($category, 'перчатки') !== false)
+                            foreach($CategoryGoods as $CategoryGood)
                             {
-
-                                if(!in_array($category, $goodCats))
-                                {
-                                    $goodCats[] = $category;
-                                }
+                                $lastCategory = \common\models\Shop\Category\Category::findOne($CategoryGood->category_id);
+                                $categoryTree  = $lastCategory->generateCrumbs($lastCategory);
+                                if($categoryTree)
+                                    {
+                                        $goodCats = [];
+                                        foreach($categoryTree as $item)
+                                        {
+                                            $goodCats[] = $item->title;
+                                        }
+                                        $goodCats = implode(' → ', $goodCats);
+                                    }
                             }
-                        }
-                    $goods[$i]['categoryes']  = implode('|', $goodCats); 
+                        }   
+                    $goods[$i]['categoryes']  = $goodCats; 
                     $i++;
             }
             $VKParser->goods = $goods;

@@ -34,7 +34,7 @@ abstract class VkDbAPI extends Loger
                 }
         return $result;
     }   
-    public function getGoodsUpdate($goods)
+    public function getGoodsUpdate($goods, $description, $utm)
     {
         $updateGoods = [];
         foreach($goods as $good)
@@ -45,7 +45,7 @@ abstract class VkDbAPI extends Loger
                     {
                         if(array_key_exists($good['good_id'], $this->existGoodsHash))
                         {
-                            $hash = $this->getHash($good);
+                            $hash = $this->getHash($good, $description, $utm);
                                 if($hash == $this->existGoodsHash[$good['good_id']])
                                 {
                                     continue;
