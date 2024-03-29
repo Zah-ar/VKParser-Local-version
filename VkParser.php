@@ -65,6 +65,7 @@ class VkParser extends VkParserApi
     public function deleteFromArray($itemID)
     {
         $existGoodsItemids    = $this->existGoodsItemids;
+        if(!is_array($existGoodsItemids)) return;
         $existGoodsItemidsFlip = array_flip($existGoodsItemids);
         if(array_key_exists($itemID, $existGoodsItemidsFlip)) unset($existGoodsItemidsFlip[$itemID]);
         $existGoodsItemids = array_flip($existGoodsItemidsFlip);
@@ -344,6 +345,7 @@ class VkParser extends VkParserApi
     { 
         $result =[];
         $this->initGoods($goodIDs);
+        $updateGoods = $this->getGoodsUpdate($this->goods, $this->description, $this->utm);
                 if(count($updateGoods) > 0)
                 {
                     foreach ($updateGoods as $good)
