@@ -9,8 +9,7 @@ class VkGoodFormater extends VkParser
         if($action == 'CREATE_GOODS')
         {
             //структура товара для добавления
-            $img = $Rotuter->sendImg($good['picture']);
-            //if(!is_int($img)) return false;
+            $img = $Rotuter->sendImg($good['picture']); 
             $result = '';   
             $result  = 'owner_id='.$OWNER_ID;    
             $result .= '&name='.urlencode($good['name']);

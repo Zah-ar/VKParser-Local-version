@@ -97,8 +97,52 @@ class Router extends Loger
             }
         return $json;
     }
+    private function getGoodCategoryes($VKParser, $good)
+    {
+        if(!array_key_exists('categoryes', $good) && !array_key_exists('discount', $good)) return false;
+        //file_get_contents(__DIR__.'/vkAlbums.txt',);
+            if(array_key_exists('categoryes', $good))
+            {
+                if(is_string($good['categoryes']))
+                {
+                    $categoryes = explode('|', $good['categoryes']);
+                    $albums = [];
+                        foreach($categoryes as $category)
+                        {
+                            if(array_key_exists(md5($category), $VKParser->vkAlbums))
+                            {
+                                $albums[] = $VKParser->vkAlbums[md5($category)];
+                            }
+                        }
+                   if(count($albums) == 0) return false;
+                   return $albums;     
+                }
+            }
+        return false;
+    }
+    private function setCategoryes($VKParser, $albums, $item_id = false)
+    {
+        if(!$item_id)
+        {
+            if(is_array($good_id)) return;
+            $arr = explode('&', $good_id);  
+            $item_id = $arr[9];
+            $item_idArr  = explode('=', $item_id);
+            $item_id = $item_idArr[count($item_idArr) - 1];
+            $existGoodsItemidsFlip = array_flip($VKParser->existGoodsItemids);
+            if(!array_key_exists($item_id, $existGoodsItemidsFlip)) return false;
+            $good_id = $existGoodsItemidsFlip[$item_id];
+        }
+               if(count($albums) == 0) return;
+                $this->addToAlbum($albums, $item_id);
+            return;
+    }
+    
     public function sendGood($VKParser, $good, $goodData, $action)
     {
+        $albums = $this->getGoodCategoryes($VKParser, $good);
+        //file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'_1.txt', print_r($albums, true));
+        
         $this->sended   = true;
         $sumbarket = 'add';
             if($action == 'UPDATE_GOODS')
@@ -138,14 +182,14 @@ class Router extends Loger
                             {
                                 $VKParser->addToArray($good['good_id'], $item_id);
                                 sleep(\common\components\VkParser\VkParser::TIMEOUT);
-                                $this->setCategoryes($VKParser, $good['good_id'], $item_id);
+                                if($albums) $this->setCategoryes($VKParser, $albums, $item_id);
                             }     
                         return $item_id;
                     }
                 }
                 if($action == 'UPDATE_GOODS')
                 {
-                    $this->setCategoryes($VKParser,$good);
+                    if($albums) $this->setCategoryes($VKParser, $albums);
                     return;
                 }
                     
@@ -199,13 +243,17 @@ class Router extends Loger
         $json_arr = json_decode($json_html);
         if($json_arr->response->count == 0) return false;
         $albums = [];
+        $data = [];
             foreach($json_arr->response->items as $item)
             {
 
                 $albums[md5($item->title)] = $item->id;
+                $data[$item->id] = $item->title;                
             }
-        
-        return $albums;
+         $result = [];
+         $result['albums'] = $albums;
+         $result['data']   = $data;
+        return $result;
     }
     
     public function getAlbums()
@@ -288,6 +336,7 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html, true);
+        file_put_contents(__DIR__.'/'.__METHOD__.'.txt', print_r($json,true));
         $marketAlbumUploadServer = $json['response']['upload_url'];
         sleep(\common\components\VkParser\VkParser::TIMEOUT);
         if(!file_exists($cover))
@@ -384,58 +433,6 @@ class Router extends Loger
          $json = json_decode($json_html);
          sleep(\common\components\VkParser\VkParser::TIMEOUT);
         return;
-    }
-    private function setCategoryes($VKParser, $good_id, $item_id = false)
-    {
-        if(!$item_id)
-        {
-            if(is_array($good_id)) return;
-            $arr = explode('&', $good_id);  
-            $item_id = $arr[9];
-            $item_idArr  = explode('=', $item_id);
-            $item_id = $item_idArr[count($item_idArr) - 1];
-            $existGoodsItemidsFlip = array_flip($VKParser->existGoodsItemids);
-            if(!array_key_exists($item_id, $existGoodsItemidsFlip)) return false;
-            $good_id = $existGoodsItemidsFlip[$item_id];
-        }
-             
-        $good = false;
-            foreach($VKParser->goods as $item)
-            {
-                if($item['good_id'] == $good_id)
-                {
-                    $good = $item;
-                    break;
-                }
-            }
-        if(!$good) return;
-        $albums =  [];
-                if(array_key_exists('discount', $good))
-                {
-                    $discounts = explode('|', $good['discount']);
-                        foreach($discounts as $discount)
-                        {
-                            if(array_key_exists(md5($discount), $VKParser->vkAlbums))
-                            {
-                                $albums[] = $VKParser->vkAlbums[md5($discount)];
-                            }
-                        }
-                }
-
-                if(array_key_exists('categoryes', $good)  && is_array($VKParser->vkAlbums))
-                {
-                    $categoryes = explode('|', $good['categoryes']);
-                        foreach($categoryes as $category)
-                        {
-                            if(array_key_exists(md5($category), $VKParser->vkAlbums))
-                            {
-                                $albums[] = $VKParser->vkAlbums[md5($category)];
-                            }
-                        }
-                }
-                if(count($albums) == 0) return;
-                $this->addToAlbum($albums, $item_id);
-            return;
     }
     private function getNotesByText($text)
     {

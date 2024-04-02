@@ -16,9 +16,11 @@ class VkController extends Controller
         //$goodsModels->byDiscountsgoods($discounts);
         //$goodsModels->byCategory($catsForAlbums);
         $goodsModels->groupBy('good.code');
-        $goodsModels->limit(50);
-        //$goodsModels->orderBy('good.id desc');
-        $goodsModels->orderBy(new \yii\db\Expression('rand()'));
+        //$goodsModels->offset(0);
+        $iteration = 2;
+        $goodsModels->limit(200 * $iteration);
+        $goodsModels->orderBy('good.id asc');
+        //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
         $VKParser = new \common\components\VkParser\VkParser;
         $VKParser->ACCESS_TOKEN = 'vk1.a.OFzMAlQgGV5r11inRWeKJseBO4GoxbZ0wUoHXCdVsE9cds5UfCPf763arYQqyzR2IjvGrZVczmyX71uwREhb9__RdXzLu80DT1fV3iFO8vHNibXkeAwg9ZxNN-SzADf09WNo-e6PdtXfv_yOU7PEqBVxWgGp_3_AMcUd1x_E1nu71aEhWyVIk0t3PH1PTuYXzgvEUelAmQ_IK3JBIsRGTw';
@@ -95,6 +97,7 @@ class VkController extends Controller
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
                     $CategoryGoods = \common\models\Shop\CategoryGood::find()->where(['and',['good_id' => $goodItem->id], ['is_dynamic' => 0], ['NOT IN','category_id', $catsOff]])->all();
+                    $goodCats = [];
                         if($CategoryGoods != null)
                         {
                             foreach($CategoryGoods as $CategoryGood)
@@ -118,9 +121,9 @@ class VkController extends Controller
                     $goods[$i]['categoryes']  = $goodCats; 
                     $i++;
             }
+            //print_r($goods);
             $allCategoryes = array_unique($allCategoryes);
-           $VKParser->goods = $goods;
-
+            $VKParser->goods = $goods;
             $goodIDs = new \yii\db\Query();
             $goodIDs->select(['good_id', 'hash', 'item_id'])
                     ->from('vk_goods')

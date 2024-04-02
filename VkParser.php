@@ -6,6 +6,7 @@ class VkParser extends VkParserApi
 {
     private $albums;
     public $vkAlbums;
+    public $vkAlbumsData;
     public $categoryes;
     public $goodCategoryes;
     public $useCategoryes;
@@ -88,6 +89,7 @@ class VkParser extends VkParserApi
             foreach($this->goods as $good)
             {
                 if(!array_key_exists('categoryes', $good)) continue;
+                if(!is_string($good['categoryes'])) continue;
                 $categoryes = explode('|', $good['categoryes']);
                     foreach($categoryes as $category)
                     {
@@ -106,7 +108,14 @@ class VkParser extends VkParserApi
     private function setAlbums()
     {
         $this->setAlbumCovers();
-        $this->vkAlbums = $this->Router->initAlbums($this->albumCovers);
+        $albums = $this->Router->initAlbums($this->albumCovers);
+        $debugData = [];
+       $i = 0; 
+        if($albums)
+        {
+            $this->vkAlbums     = $albums['albums'];
+            $this->vkAlbumsData = $albums['data'];
+        }
             if(is_array($this->vkAlbums))
             {
                 //Удаление старых альбомов
@@ -162,8 +171,14 @@ class VkParser extends VkParserApi
                             return false;
                         }
                         $albums[md5($category)] = $albumID;
+                        $debugData[$i] = [];
+                        $debugData[$i]['album_id']   = $albumID;
+                        $debugData[$i]['album_name'] = $category;
+                        //file_put_contents(__DIR__.'/createdAlbums.txt', print_r($debugData,true).PHP_EOL);
+                        $i++;
                     }
                 $this->vkAlbums = $albums;
+
             }
         
         return;
@@ -179,6 +194,10 @@ class VkParser extends VkParserApi
                 if($this->useCategoryes)
                 {
                     if(!array_key_exists('categoryes', $good))
+                    {
+                        continue;
+                    }
+                    if(!is_string($good['categoryes']))
                     {
                         continue;
                     }
@@ -389,7 +408,7 @@ class VkParser extends VkParserApi
                                 $result['item_id'] =  $itemID;
                                 call_user_func($this->userClass.'::'.$this->endpoint, $result);
                             }
-                        sleep(\common\components\VkParser\VKParser::TIMEOUT);
+                        //sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
                 }
                 $deleteGoods = $this->getGoodsDelete($this->goods);
