@@ -65,6 +65,7 @@ class VkParser extends VkParserApi
     }
     public function deleteFromArray($itemID)
     {
+        return;
         $existGoodsItemids    = $this->existGoodsItemids;
         if(!is_array($existGoodsItemids)) return;
         $existGoodsItemidsFlip = array_flip($existGoodsItemids);
@@ -408,7 +409,7 @@ class VkParser extends VkParserApi
                                 $result['item_id'] =  $itemID;
                                 call_user_func($this->userClass.'::'.$this->endpoint, $result);
                             }
-                        //sleep(\common\components\VkParser\VKParser::TIMEOUT);
+                        sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
                 }
                 $deleteGoods = $this->getGoodsDelete($this->goods);
