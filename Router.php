@@ -142,7 +142,6 @@ class Router extends Loger
     {
         $albums = $this->getGoodCategoryes($VKParser, $good);
         //file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'_1.txt', print_r($albums, true));
-        
         $this->sended   = true;
         $sumbarket = 'add';
             if($action == 'UPDATE_GOODS')
@@ -189,7 +188,7 @@ class Router extends Loger
                 }
                 if($action == 'UPDATE_GOODS')
                 {
-                    if($albums) $this->setCategoryes($VKParser, $albums);
+                    if($albums) $this->setCategoryes($VKParser, $albums, $good['item_id']);
                     return;
                 }
                     
@@ -232,7 +231,7 @@ class Router extends Loger
     public function initAlbums($albumCovers)
     {
         $this->albumCovers = $albumCovers;
-        $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
+        $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&limit=50&offset=0';
         $arrContextOptions = array(
             "ssl" => array(
                 "verify_peer" => false,
@@ -250,10 +249,26 @@ class Router extends Loger
                 $albums[md5($item->title)] = $item->id;
                 $data[$item->id] = $item->title;                
             }
-         $result = [];
-         $result['albums'] = $albums;
-         $result['data']   = $data;
-        return $result;
+            $result = [];
+            $result['albums'] = $albums;
+            $result['data']   = $data;
+            if($json_arr->response->count <= 50) return $result;
+            sleep(\common\components\VkParser\VkParser::TIMEOUT);
+            $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&limit=50&offset=50';
+            $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+            $json_arr = json_decode($json_html);
+            if($json_arr->response->count == 0) return $result;
+            $albums = [];
+            $data = [];
+                foreach($json_arr->response->items as $item)
+                {
+    
+                    $albums[md5($item->title)] = $item->id;
+                    $data[$item->id] = $item->title;                
+                }
+            $result['albums'] = array_merge($result['albums'], $albums);
+            $result['data'] = array_merge($result['data'], $data);    
+            return $result;
     }
     
     public function getAlbums()
@@ -384,8 +399,9 @@ class Router extends Loger
     }
     public function craeateAlbum($name, $iteration = 0) 
     {
-        /*$albumExist = $this->getAlbum($name);
-        if($albumExist) return $albumExist;*/
+        return;
+        $albumExist = $this->getAlbum($name);
+        if($albumExist) return $albumExist;
         $albumCover = false;
             if($this->albumCovers)
             {

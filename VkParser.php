@@ -110,8 +110,9 @@ class VkParser extends VkParserApi
     {
         $this->setAlbumCovers();
         $albums = $this->Router->initAlbums($this->albumCovers);
-        $debugData = [];
-       $i = 0; 
+        file_put_contents(__DIR__.'/log/vkAlbums.txt', print_r($albums['data'],true));
+        $debugData = [];    
+        $i = 0; 
         if($albums)
         {
             $this->vkAlbums     = $albums['albums'];
@@ -179,7 +180,6 @@ class VkParser extends VkParserApi
                         $i++;
                     }
                 $this->vkAlbums = $albums;
-
             }
         
         return;
@@ -365,7 +365,7 @@ class VkParser extends VkParserApi
     { 
         $result =[];
         $this->initGoods($goodIDs);
-        $updateGoods = $this->getGoodsUpdate($this->goods, $this->description, $this->utm);
+        $updateGoods = $this->getGoodsUpdate($this->goods, $this->description, $this->utm, $this->existGoodsItemids);
                 if(count($updateGoods) > 0)
                 {
                     foreach ($updateGoods as $good)
