@@ -120,6 +120,37 @@ class Router extends Loger
             }
         return false;
     }
+    private function getUnsetAlbums($VKParser, $albums)
+    {
+        if(!is_array($VKParser->vkAlbums)) return false;
+        $unsetAlbums = [];
+            foreach($VKParser->vkAlbums as $vkAlbum)
+            {
+                if(!in_array($vkAlbum, $albums)) $unsetAlbums[] = $vkAlbum;
+            }     ;
+         if(count($unsetAlbums) == 0) return false;
+         return $unsetAlbums;       
+    }
+    private function unsetCategoryes($VKParser, $albums, $item_id = false)
+    {
+        if(!$item_id)
+        {
+            if(is_array($good_id)) return;
+            $arr = explode('&', $good_id);  
+            $item_id = $arr[9];
+            $item_idArr  = explode('=', $item_id);
+            $item_id = $item_idArr[count($item_idArr) - 1];
+            $existGoodsItemidsFlip = array_flip($VKParser->existGoodsItemids);
+            if(!array_key_exists($item_id, $existGoodsItemidsFlip)) return false;
+            $good_id = $existGoodsItemidsFlip[$item_id];
+        }
+        $unsetAlbums = $this->getUnsetAlbums($VKParser, $albums);
+        if(!$unsetAlbums) return;
+        $this->removeFromAlbum($unsetAlbums, $item_id);
+     return;
+    }
+    
+    
     private function setCategoryes($VKParser, $albums, $item_id = false)
     {
         if(!$item_id)
@@ -182,13 +213,17 @@ class Router extends Loger
                                 $VKParser->addToArray($good['good_id'], $item_id);
                                 sleep(\common\components\VkParser\VkParser::TIMEOUT);
                                 if($albums) $this->setCategoryes($VKParser, $albums, $item_id);
-                            }     
+                            }         
                         return $item_id;
                     }
                 }
                 if($action == 'UPDATE_GOODS')
                 {
-                    if($albums) $this->setCategoryes($VKParser, $albums, $good['item_id']);
+                    if($albums)
+                    {
+                        $this->unsetCategoryes($VKParser, $albums, $good['item_id']);
+                        $this->setCategoryes($VKParser, $albums, $good['item_id']);
+                    } 
                     return;
                 }
                     
@@ -434,6 +469,22 @@ class Router extends Loger
                 return false;
             }
         return $json->response->market_album_id;
+    }
+
+    public function removeFromAlbum($albums, $item_id)
+    {
+        
+        $url = $this->VK_URL.'market.removeFromAlbum?access_token='.$this->ACCESS_TOKEN.'&v=5.13&owner_id='.$this->OWNER_ID.'&item_id='.$item_id.'&v=5.131&album_ids='.implode(',', $albums);
+         $arrContextOptions = array(
+                        "ssl" => array(
+                            "verify_peer" => false,
+                            "verify_peer_name" => false,
+                        ),
+                    );
+         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
+         $json = json_decode($json_html);
+         sleep(\common\components\VkParser\VkParser::TIMEOUT);
+        return;
     }
     
     public function addToAlbum($albums, $item_id)
