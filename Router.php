@@ -182,7 +182,6 @@ class Router extends Loger
         $cnt = 0;   
 
             $url = $this->VK_URL.'market.'.$sumbarket.'/?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&'. $goodData; 
-                    
             $arrContextOptions = array(
                 "ssl" => array(
                     "verify_peer" => false,
@@ -191,7 +190,6 @@ class Router extends Loger
             );
             $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
             $json = json_decode($json_html, true);
-            //print_r($json);
                 if(array_key_exists('error', $json))
                 {
                     $this->setLog('[Error] '.print_r($json['error'],true));

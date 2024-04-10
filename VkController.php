@@ -94,7 +94,14 @@ class VkController extends Controller
                     $goods[$i]['pickup']      = 1;
                     $goods[$i]['name']        = $goodItem->title;
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
-                    $goods[$i]['color']       = $goodItem->color;
+                    $color = str_replace('|', ', ', $goodItem->color);
+                    $color = str_replace(', разноцветный', '', $color);
+                    $color = str_replace(', Разноцветный', '', $color);
+                    $color = str_replace('разноцветный, ', '', $color);
+                    $color = str_replace('Разноцветный, ', '', $color);
+                    
+                    $goods[$i]['color']       = $color;
+                   
                     $goods[$i]['size']        = $goodItem->size;            
                     $allGoodCategoryes = [];
                     $CategoryGoods = \common\models\Shop\CategoryGood::find()->where(['and',['good_id' => $goodItem->id], ['is_dynamic' => 0], ['NOT IN','category_id', $catsOff]])->all();

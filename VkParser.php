@@ -389,7 +389,6 @@ class VkParser extends VkParserApi
                 $createGoods = $this->getGoodsCreate($this->goods);
                 if(count($createGoods) > 0)    
                 {
-                    $i = 0;
                     foreach ($createGoods as $good)
                     {
                         if(!array_key_exists('good_id', $good))
