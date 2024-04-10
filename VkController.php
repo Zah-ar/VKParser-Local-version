@@ -17,8 +17,8 @@ class VkController extends Controller
         //$goodsModels->byCategory($catsForAlbums);
         $goodsModels->groupBy('good.code');
         //$goodsModels->offset(0);
-        $iteration = 2;
-        $goodsModels->limit(200 * $iteration);
+        //$iteration = 5;
+        //$goodsModels->limit(200 * $iteration);      
         $goodsModels->orderBy('good.id asc');
         //$goodsModels->orderBy(new \yii\db\Expression('rand()'));
         $goodsModels = $goodsModels->all();
@@ -96,29 +96,30 @@ class VkController extends Controller
                     $goods[$i]['vendor']      = $goodItem->vendor->title;
                     $goods[$i]['color']       = $goodItem->color;
                     $goods[$i]['size']        = $goodItem->size;            
+                    $allGoodCategoryes = [];
                     $CategoryGoods = \common\models\Shop\CategoryGood::find()->where(['and',['good_id' => $goodItem->id], ['is_dynamic' => 0], ['NOT IN','category_id', $catsOff]])->all();
-                    $goodCats = [];
                         if($CategoryGoods != null)
                         {
+                           
                             foreach($CategoryGoods as $CategoryGood)
                             {
                                 $lastCategory = \common\models\Shop\Category\Category::findOne($CategoryGood->category_id);
                                 if($lastCategory == null) continue;
                                 //$allCategoryes[] = $lastCategory->id;
+                                $goodCats = [];
                                 $categoryTree  = $lastCategory->generateCrumbs($lastCategory);
                                 if($categoryTree)
                                     {
-                                        $goodCats = [];
                                         foreach($categoryTree as $item)
                                         {
                                             $goodCats[] = $item->title;
                                         }
                                         $goodCats = implode(' → ', $goodCats);
-                                        $allCategoryes[] = $goodCats;
+                                        $allGoodCategoryes[] = $goodCats;
                                     }
                             }
                         }   
-                    $goods[$i]['categoryes']  = $goodCats; 
+                    $goods[$i]['categoryes']  = implode('|', $allGoodCategoryes); 
                     $i++;
             }
             //print_r($goods);

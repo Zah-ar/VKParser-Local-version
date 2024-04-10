@@ -385,8 +385,7 @@ class VkParser extends VkParserApi
                         call_user_func($this->userClass.'::'.$this->endpoint, $result);
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
-                }
-         return;       
+                } 
                 $createGoods = $this->getGoodsCreate($this->goods);
                 if(count($createGoods) > 0)    
                 {
