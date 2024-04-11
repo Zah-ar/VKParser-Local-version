@@ -10,7 +10,7 @@ class GoodTemplate
     }
     private function setParams(&$result, $good)
     {
-        if($good['size'] !=  'no defined' && mb_strlen($good['size']) != 0)
+        if($good['size'] !=  'no defined' && mb_strtolower($good['size']) !=  'no difned' && mb_strtolower($good['size']) !=  'one size' && mb_strlen($good['size']) != 0)
         {
             $result = str_replace('%size%', strtoupper($good['size']), $result);
         }else{

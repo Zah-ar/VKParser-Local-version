@@ -23,7 +23,7 @@ abstract class VkParserApi extends VkDbAPI
    {
         $discount = false;
         if(array_key_exists('discount', $good)) $discount = $good['discount'];
-        $good = $good['available'].$good['url'].$good['price'].$good['old_price'].$good['categoryId'].$good['picture'].$good['store'].$good['pickup'].$good['name'].$good['vendor'].$good['color'].$good['size'];
+        $good = $good['available'].$good['url'].$good['price'].$good['old_price'].$good['categoryId'].$good['picture'].$good['store'].$good['pickup'].$good['name'].$good['vendor'].$good['color'].$good['size'].$good['categoryes'];
         if($utm) $good .= $utm;
         //if($this->promoAlbums && $discount) $good .= $discount;
         return md5($good.$description);

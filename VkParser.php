@@ -366,6 +366,8 @@ class VkParser extends VkParserApi
         $result =[];
         $this->initGoods($goodIDs);
         $updateGoods = $this->getGoodsUpdate($this->goods, $this->description, $this->utm, $this->existGoodsItemids);
+        echo count($updateGoods);
+        return;
                 if(count($updateGoods) > 0)
                 {
                     foreach ($updateGoods as $good)
