@@ -15,6 +15,8 @@ class VkController extends Controller
         $goodsModels = \common\models\Shop\Good\Good::find()->select('good.*')->joinWith('page')->with(['page','vendor','images','cover', 'categories'])->where(['page.is_published' => 1])->andWhere(['or', ['>','stock',0] , ['>','stock_msk',0]]);
         //$goodsModels->byDiscountsgoods($discounts);
         //$goodsModels->byCategory($catsForAlbums);
+        $goodsModels->orderBy('good.id ASC');
+        $goodsModels->addOrderBy('good.size ASC');
         $goodsModels->groupBy('good.code');
         //$goodsModels->offset(0);
         //$iteration = 5;
