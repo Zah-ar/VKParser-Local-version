@@ -394,7 +394,6 @@ class VkParser extends VkParserApi
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
                 } 
-                return;
                 $createGoods = $this->getGoodsCreate($this->goods);
                 if(count($createGoods) > 0)    
                 {
