@@ -172,7 +172,7 @@ class Router extends Loger
     public function sendGood($VKParser, $good, $goodData, $action)
     {
         $albums = $this->getGoodCategoryes($VKParser, $good);
-        //file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'_1.txt', print_r($albums, true));
+        file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'_1.txt', print_r($albums, true));
         $this->sended   = true;
         $sumbarket = 'add';
             if($action == 'UPDATE_GOODS')
@@ -432,7 +432,6 @@ class Router extends Loger
     }
     public function craeateAlbum($name, $iteration = 0) 
     {
-        return;
         $albumExist = $this->getAlbum($name);
         if($albumExist) return $albumExist;
         $albumCover = false;
@@ -454,9 +453,10 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html);
+        
             if(array_key_exists('error', $json))
             {
-                if(!get_object_vars($json)['error']['error_code'] == 6 || $iteration > 1) return false;
+                if(/*!get_object_vars($json)['error']['error_code'] == 6 ||*/ $iteration > 1) return false;
                 sleep(5 * \common\components\VkParser\VkParser::TIMEOUT);
                 return $this->craeateAlbum($name, 1);
             }

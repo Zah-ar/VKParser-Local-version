@@ -127,7 +127,11 @@ class VkController extends Controller
                                         $allGoodCategoryes[] = $goodCats;
                                     }
                             }
-                        }   
+                        }  
+                        if($goodItem->new == 1)
+                        {
+                            $allGoodCategoryes[] = 'Новинки';
+                        }         
                     $goods[$i]['categoryes']  = implode('|', $allGoodCategoryes); 
                     $i++;
             }

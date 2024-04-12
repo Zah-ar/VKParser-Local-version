@@ -111,6 +111,8 @@ class VkParser extends VkParserApi
         $this->setAlbumCovers();
         $albums = $this->Router->initAlbums($this->albumCovers);
         file_put_contents(__DIR__.'/log/vkAlbums.txt', print_r($albums['data'],true));
+       // echo count($albums['data']);
+        $albums == false ? $albumsCnt = 0 : $albumsCnt = count($albums['data']);
         $debugData = [];    
         $i = 0; 
         if($albums)
@@ -154,19 +156,21 @@ class VkParser extends VkParserApi
                 $albums = [];
                     if($this->vkAlbums)
                     {
-                        if(count($this->vkAlbums) > self::MAX_ALBUMS)
+                        if($albumsCnt > self::MAX_ALBUMS)
                         {
-                            echo 'Ошибка! Слишком много категорий и акций. Максимальное количество '.self::MAX_ALBUMS;
                             return;
                         }
-                        $albums = $this->vkAlbums;
                     }
                     foreach($this->goodCategoryes as $category)
                     {
+                        if(mb_strlen(trim($category)) == 0)
+                        {
+                            continue;
+                        }
                         if(array_key_exists(md5($category), $albums))
                         {
                             continue;
-                        } 
+                        }
                         $albumID = $this->Router->craeateAlbum($category);
                         if(!$albumID)
                         {
@@ -366,12 +370,14 @@ class VkParser extends VkParserApi
         $result =[];
         $this->initGoods($goodIDs);
         $updateGoods = $this->getGoodsUpdate($this->goods, $this->description, $this->utm, $this->existGoodsItemids);
-        echo count($updateGoods);
-        return;
                 if(count($updateGoods) > 0)
                 {
                     foreach ($updateGoods as $good)
                     {
+                        if($good['good_id'] != 'hayrash0113')
+                        {
+                            continue;
+                        }
                         $result = [];
                         $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'UPDATE_GOODS');
                             if(!$goodData)
@@ -388,6 +394,7 @@ class VkParser extends VkParserApi
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
                 } 
+                return;
                 $createGoods = $this->getGoodsCreate($this->goods);
                 if(count($createGoods) > 0)    
                 {
