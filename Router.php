@@ -384,7 +384,7 @@ class Router extends Loger
         );
         $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
         $json = json_decode($json_html, true);
-        file_put_contents(__DIR__.'/'.__METHOD__.'.txt', print_r($json,true));
+        //file_put_contents(__DIR__.'/'.__METHOD__.'.txt', print_r($json,true));
         $marketAlbumUploadServer = $json['response']['upload_url'];
         sleep(\common\components\VkParser\VkParser::TIMEOUT);
         if(!file_exists($cover))
