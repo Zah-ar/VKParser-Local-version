@@ -111,7 +111,6 @@ class VkParser extends VkParserApi
         $this->setAlbumCovers();
         $albums = $this->Router->initAlbums($this->albumCovers);
         file_put_contents(__DIR__.'/log/vkAlbums.txt', print_r($albums['data'],true));
-       // echo count($albums['data']);
         $albums == false ? $albumsCnt = 0 : $albumsCnt = count($albums['data']);
         $debugData = [];    
         $i = 0; 
@@ -145,6 +144,7 @@ class VkParser extends VkParserApi
                                     {
                                         $this->Router->deleteAlbumById($this->vkAlbums[$item]);
                                         unset($this->vkAlbums[$item]);
+                                        if($albumsCnt != 0) $albumsCnt--;
                                     }
                                 }
                              }  
@@ -154,6 +154,7 @@ class VkParser extends VkParserApi
             {
                 //Создание новых альбомов
                 $albums = [];
+                $tmpAlbums = [];
                     if($this->vkAlbums)
                     {
                         if($albumsCnt > self::MAX_ALBUMS)
@@ -163,6 +164,12 @@ class VkParser extends VkParserApi
                     }
                     foreach($this->goodCategoryes as $category)
                     {
+                        if(in_array($category, $tmpAlbums)) continue;
+                        $tmpAlbums[] = $category;
+                        if($albumsCnt > self::MAX_ALBUMS)
+                        {
+                            continue;
+                        }
                         if(mb_strlen(trim($category)) == 0)
                         {
                             continue;
@@ -171,17 +178,46 @@ class VkParser extends VkParserApi
                         {
                             continue;
                         }
-                        $albumID = $this->Router->craeateAlbum($category);
-                        if(!$albumID)
+                        if($this->vkAlbums)
                         {
-                            return false;
+                            
+                            if(!array_key_exists(md5($category), $this->vkAlbums))
+                            {
+                                $albumID = $this->Router->craeateAlbum($category);
+                                if(!$albumID)
+                                {
+                                    return false;
+                                }
+                                $albums[md5($category)] = $albumID;
+                                $debugData[$i] = [];
+                                $debugData[$i]['album_id']   = $albumID;
+                                $debugData[$i]['album_name'] = $category;
+                                //file_put_contents(__DIR__.'/createdAlbums.txt', print_r($debugData,true).PHP_EOL);
+                                $albumsCnt++;
+                                $i++;
+                                if($albumsCnt > self::MAX_ALBUMS)
+                                {
+                                    break;  
+                                }
+                            }
+                        }else{
+                            $albumID = $this->Router->craeateAlbum($category);
+                                if(!$albumID)
+                                {
+                                    return false;
+                                }
+                                $albums[md5($category)] = $albumID;
+                                $debugData[$i] = [];
+                                $debugData[$i]['album_id']   = $albumID;
+                                $debugData[$i]['album_name'] = $category;
+                                //file_put_contents(__DIR__.'/createdAlbums.txt', print_r($debugData,true).PHP_EOL);
+                                $albumsCnt++;
+                                $i++;
+                                if($albumsCnt > self::MAX_ALBUMS)
+                                {
+                                    break;  
+                                }
                         }
-                        $albums[md5($category)] = $albumID;
-                        $debugData[$i] = [];
-                        $debugData[$i]['album_id']   = $albumID;
-                        $debugData[$i]['album_name'] = $category;
-                        //file_put_contents(__DIR__.'/createdAlbums.txt', print_r($debugData,true).PHP_EOL);
-                        $i++;
                     }
                 $this->vkAlbums = $albums;
             }
@@ -374,10 +410,6 @@ class VkParser extends VkParserApi
                 {
                     foreach ($updateGoods as $good)
                     {
-                        if($good['good_id'] != 'hayrash0113')
-                        {
-                            continue;
-                        }
                         $result = [];
                         $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'UPDATE_GOODS');
                             if(!$goodData)

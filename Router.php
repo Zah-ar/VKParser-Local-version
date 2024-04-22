@@ -127,7 +127,7 @@ class Router extends Loger
             foreach($VKParser->vkAlbums as $vkAlbum)
             {
                 if(!in_array($vkAlbum, $albums)) $unsetAlbums[] = $vkAlbum;
-            }     ;
+            }     
          if(count($unsetAlbums) == 0) return false;
          return $unsetAlbums;       
     }
@@ -172,7 +172,7 @@ class Router extends Loger
     public function sendGood($VKParser, $good, $goodData, $action)
     {
         $albums = $this->getGoodCategoryes($VKParser, $good);
-        //file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'_1.txt', print_r($albums, true));
+     //   file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'.txt', print_r($albums, true));
         $this->sended   = true;
         $sumbarket = 'add';
             if($action == 'UPDATE_GOODS')

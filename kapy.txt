@@ -1,0 +1,307 @@
+Array
+(
+    [0] => Array
+        (
+            [good_id] => hctprburl07
+            [available] => 1
+            [url] => https://4mma.ru/good/11400/
+            [old_price] => 0
+            [price] => 1190
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/170193795865718326d44ff9.98303372.pr_15886_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 5Капа Hardcore Training Good Irish Fight
+            [vendor] => Hardcore Training
+            [color] => Зеленый
+            [size] => One size
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9359710
+        )
+
+    [1] => Array
+        (
+            [good_id] => hctprburl06
+            [available] => 1
+            [url] => https://4mma.ru/good/11401/
+            [old_price] => 0
+            [price] => 1190
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/170193795765718325022762.24724779.pr_15885_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 7Капа Hardcore Training Good Old Boxing
+            [vendor] => Hardcore Training
+            [color] => Синий
+            [size] => One size
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9359714
+        )
+
+    [2] => Array
+        (
+            [good_id] => hctprburl05
+            [available] => 1
+            [url] => https://4mma.ru/good/11402/
+            [old_price] => 0
+            [price] => 1190
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/170670601365ba445d4e0fb2.90774305.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 0Капа Hardcore Training Grenadier
+            [vendor] => Hardcore Training
+            [color] => Зеленый
+            [size] => One size
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9359715
+        )
+
+    [3] => Array
+        (
+            [good_id] => oprprburl0127
+            [available] => 1
+            [url] => https://4mma.ru/good/15172/
+            [old_price] => 0
+            [price] => 890
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/16153248456047e6adea56a3.66931309.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 1Капа UFC Opro Snap-Fit UFC Black
+            [vendor] => Opro
+            [color] => Черный
+            [size] => one size
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9360243
+        )
+
+    [4] => Array
+        (
+            [good_id] => tkbprburl01
+            [available] => 1
+            [url] => https://4mma.ru/good/28590/
+            [old_price] => 0
+            [price] => 1990
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/16153248556047e6b75c1a94.78284289.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 10Боксерская капа Top King
+            [vendor] => Top king boxing
+            [color] => Белый|Красный|Разноцветный|Черный
+            [size] => Черный
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9361421
+        )
+
+    [5] => Array
+        (
+            [good_id] => hctprburl09
+            [available] => 1
+            [url] => https://4mma.ru/good/41558/
+            [old_price] => 0
+            [price] => 1290
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/165756973562cc81c7305a75.90918483.pr_19467_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 1Боксерская капа Hardcore Training Holmgang
+            [vendor] => Hardcore Training
+            [color] => Желтый|Разноцветный|Черный
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363425
+        )
+
+    [6] => Array
+        (
+            [good_id] => hctprburl013
+            [available] => 1
+            [url] => https://4mma.ru/good/41565/
+            [old_price] => 0
+            [price] => 890
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/165756974662cc81d2cd5e81.89884703.pr_20746_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 9Боксерская капа Hardcore Training Base Blue
+            [vendor] => Hardcore Training
+            [color] => Синий
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363426
+        )
+
+    [7] => Array
+        (
+            [good_id] => hctprburl010
+            [available] => 1
+            [url] => https://4mma.ru/good/41568/
+            [old_price] => 0
+            [price] => 1290
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/165756975362cc81d9642106.92950934.pr_19468_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 4Боксерская капа Hardcore Training Viking
+            [vendor] => Hardcore Training
+            [color] => Белый|Красный|Разноцветный
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363427
+        )
+
+    [8] => Array
+        (
+            [good_id] => hctprburl015
+            [available] => 1
+            [url] => https://4mma.ru/good/41581/
+            [old_price] => 0
+            [price] => 890
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/165756977462cc81eec45a76.58297302.pr_20748_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 10Боксерская капа Hardcore Training Base Green
+            [vendor] => Hardcore Training
+            [color] => Зеленый
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363430
+        )
+
+    [9] => Array
+        (
+            [good_id] => hctprburl016
+            [available] => 1
+            [url] => https://4mma.ru/good/41721/
+            [old_price] => 0
+            [price] => 890
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/165756991762cc827dd88f31.64727946.pr_20749_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 1Боксерская капа Hardcore Training Base Black
+            [vendor] => Hardcore Training
+            [color] => Черный
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363472
+        )
+
+    [10] => Array
+        (
+            [good_id] => oprprburl04
+            [available] => 1
+            [url] => https://4mma.ru/good/41722/
+            [old_price] => 0
+            [price] => 1990
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/165756991962cc827f04fec9.22182634.pr_14505_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 4Капа UFC Opro Bronze Level White
+            [vendor] => Opro
+            [color] => Белый
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363473
+        )
+
+    [11] => Array
+        (
+            [good_id] => hctprburl014
+            [available] => 1
+            [url] => https://4mma.ru/good/43286/
+            [old_price] => 0
+            [price] => 890
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/1666884401635aa3318d7b02.24502386.pr_20747_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 7Боксерская капа Hardcore Training Base Red
+            [vendor] => Hardcore Training
+            [color] => Красный
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363630
+        )
+
+    [12] => Array
+        (
+            [good_id] => hayprburl02
+            [available] => 1
+            [url] => https://4mma.ru/good/45408/
+            [old_price] => 0
+            [price] => 4390
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/167666814763efecf3ecb5c8.53351529.pr_22081_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 4Боксерская капа Hayabusa Combat Mouth Guard White
+            [vendor] => Hayabusa
+            [color] => Белый|Красный|Разноцветный
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363887
+        )
+
+    [13] => Array
+        (
+            [good_id] => hctprburl012
+            [available] => 1
+            [url] => https://4mma.ru/good/45869/
+            [old_price] => 0
+            [price] => 890
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/1679652868641d7804926b22.67588225.pr_20725_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 2Боксерская капа Hardcore Training Base Yellow
+            [vendor] => Hardcore Training
+            [color] => Желтый
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9363947
+        )
+
+    [14] => Array
+        (
+            [good_id] => manprburl04
+            [available] => 1
+            [url] => https://4mma.ru/good/48909/
+            [old_price] => 0
+            [price] => 990
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/1699564118654d4a56d4fe28.38743097.pr_22974_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 4Боксерская капа Manto Basic Black
+            [vendor] => Manto
+            [color] => Черный
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9364671
+        )
+
+    [15] => Array
+        (
+            [good_id] => manprburl05
+            [available] => 1
+            [url] => https://4mma.ru/good/48910/
+            [old_price] => 0
+            [price] => 990
+            [categoryId] => 57
+            [picture] => /www/test.4mma.ru/frontend/web/media/images/1699564119654d4a5747eac0.27488263.pr_22975_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Update 3Боксерская капа Manto Basic Yellow
+            [vendor] => Manto
+            [color] => Желтый
+            [size] => no difned
+            [categoryes] => Экипировка → Защита → Капы
+            [item_id] => 9364673
+        )
+
+)
