@@ -542,6 +542,7 @@ class Router extends Loger
         {
             $url.= '&attachments='.implode(',', $attachmentsArr);
         }
+        $url .= '&mark_as_ads=1';
         $arrContextOptions = array(
                        "ssl" => array(
                            "verify_peer" => false,
