@@ -244,6 +244,7 @@ class Router extends Loger
     }
     private function getAlbum($name)
     {
+        sleep(\common\components\VkParser\VkParser::TIMEOUT);
         $url = $this->VK_URL.'market.getAlbums?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID;
         $arrContextOptions = array(
             "ssl" => array(
