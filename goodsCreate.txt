@@ -1,0 +1,1002 @@
+Array
+(
+    [0] => Array
+        (
+            [good_id] => rocbprshin4010
+            [available] => 1
+            [url] => https://4mma.ru/good/889/
+            [old_price] => 0
+            [price] => 1990
+            [categoryId] => 51
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153248076047e68745f892.27083925.temp.jpg
+            [store] => 1
+            [pickup] => 1
+            [name] => Защита голени Rocktape черный
+            [vendor] => RockTape
+            [color] => Белый, Черный
+            [size] => S
+            [categoryes] => Экипировка → Защита → Защита голени|Экипировка → Защита|Экипировка
+        )
+
+    [1] => Array
+        (
+            [good_id] => rocprnk04
+            [available] => 1
+            [url] => https://4mma.ru/good/902/
+            [old_price] => 0
+            [price] => 2990
+            [categoryId] => 54
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153248786047e6ceda1fc0.00816091.temp.jpg
+            [store] => 1
+            [pickup] => 1
+            [name] => Наколенники Rocktape KneeCaps manifesto 7мм
+            [vendor] => RockTape
+            [color] => Черный
+            [size] => XS
+            [categoryes] => Экипировка → Защита → Наколенники|Экипировка → Защита|Экипировка
+        )
+
+    [2] => Array
+        (
+            [good_id] => rocfig042
+            [available] => 1
+            [url] => https://4mma.ru/good/2324/
+            [old_price] => 0
+            [price] => 1090
+            [categoryId] => 107
+            [picture] => /www/4mma.ru/frontend/web/media/images/1617884416606ef500648509.44935591.temp.jpg
+            [store] => 1
+            [pickup] => 1
+            [name] => Водостойкий Кинезио тейп Rocktape H2O телесный 5см×5м
+            [vendor] => RockTape
+            [color] => Бежевый, Коричневый
+            [size] => One size
+            [categoryes] => Аксессуары → Кинезио тейп|Аксессуары
+        )
+
+    [3] => Array
+        (
+            [good_id] => rocprnk0017
+            [available] => 1
+            [url] => https://4mma.ru/good/3054/
+            [old_price] => 0
+            [price] => 3390
+            [categoryId] => 54
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153248936047e6ddd19826.52522579.temp.jpg
+            [store] => 1
+            [pickup] => 1
+            [name] => Наколенники Rocktape Assassins manifesto 7мм
+            [vendor] => RockTape
+            [color] => Белый, Черный
+            [size] => XS
+            [categoryes] => Экипировка → Защита → Наколенники|Экипировка → Защита|Экипировка
+        )
+
+    [4] => Array
+        (
+            [good_id] => undpan0004
+            [available] => 1
+            [url] => https://4mma.ru/good/4710/
+            [old_price] => 0
+            [price] => 4490
+            [categoryId] => 36
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153245476047e583c34253.35150998.temp.jpg
+            [store] => 1
+            [pickup] => 1
+            [name] => Женские компрессионные Штаны Under Armour Coldgear Armour Grey
+            [vendor] => Under Armour
+            [color] => Серый
+            [size] => XS
+            [categoryes] => Одежда → Штаны → Компрессионные штаны → Женские компрессионные штаны|Одежда → Штаны → Компрессионные штаны|Одежда → Штаны|Одежда|Каталог → Для девушек|Каталог|Для девушек → Леггинсы|Для девушек
+        )
+
+    [5] => Array
+        (
+            [good_id] => hctrash0122
+            [available] => 1
+            [url] => https://4mma.ru/good/11874/
+            [price] => 3003
+            [old_price] => 4290
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 6
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153236226047e1e6ca83e2.32610101.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Hardcore Training Gorilla
+            [vendor] => Hardcore Training
+            [color] => Синий, Черный
+            [size] => M
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [6] => Array
+        (
+            [good_id] => fnswbra01
+            [available] => 1
+            [url] => https://4mma.ru/good/11891/
+            [price] => 2023
+            [old_price] => 2890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 22
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153238026047e29a61bcb7.94615754.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Топик Fight Nights Camo
+            [vendor] => Fight Nights
+            [color] => Камуфляж
+            [size] => S
+            [categoryes] => Одежда → Футболки → Майки|Одежда → Футболки|Одежда|Акционные товары
+        )
+
+    [7] => Array
+        (
+            [good_id] => fnswbra02
+            [available] => 1
+            [url] => https://4mma.ru/good/11894/
+            [price] => 2023
+            [old_price] => 2890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 22
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153238316047e2b7cb6db9.05230247.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Топик Fight Nights
+            [vendor] => Fight Nights
+            [color] => Красный
+            [size] => M
+            [categoryes] => Одежда → Футболки → Майки|Одежда → Футболки|Одежда|Акционные товары
+        )
+
+    [8] => Array
+        (
+            [good_id] => fnsrash01
+            [available] => 1
+            [url] => https://4mma.ru/good/11898/
+            [price] => 2723
+            [old_price] => 3890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 6
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153236536047e205402a90.22127394.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Fight Nights Camo LS
+            [vendor] => Fight Nights
+            [color] => Камуфляж, Серый
+            [size] => M
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [9] => Array
+        (
+            [good_id] => fnsshirt026
+            [available] => 1
+            [url] => https://4mma.ru/good/11926/
+            [price] => 2723
+            [old_price] => 3890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 21
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153240436047e38b45e390.52465721.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женская тренировочная футболка Fight Nights
+            [vendor] => Fight Nights
+            [color] => no defined
+            [size] => M
+            [categoryes] => Одежда → Футболки → Повседневные футболки|Одежда → Футболки|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [10] => Array
+        (
+            [good_id] => rocfig03
+            [available] => 1
+            [url] => https://4mma.ru/good/12478/
+            [old_price] => 0
+            [price] => 940
+            [categoryId] => 107
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153229136047df212d35a4.65970171.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Кинезио тейп RockTape British flag 5см×5м
+            [vendor] => RockTape
+            [color] => Красный
+            [size] => One size
+            [categoryes] => Аксессуары → Кинезио тейп|Аксессуары
+        )
+
+    [11] => Array
+        (
+            [good_id] => hayshorts090
+            [available] => 1
+            [url] => https://4mma.ru/good/12487/
+            [old_price] => 0
+            [price] => 8490
+            [categoryId] => 8
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153243896047e4e54f7f61.66006680.temp.jfif
+            [store] => 1
+            [pickup] => 1
+            [name] => Шорты Hayabusa Kickboxing 2.0
+            [vendor] => Hayabusa
+            [color] => Синий
+            [size] => L
+            [categoryes] => Одежда → Шорты|Одежда|Одежда → Шорты → Шорты ММА|Одежда → Шорты|Одежда
+        )
+
+    [12] => Array
+        (
+            [good_id] => rocfig020
+            [available] => 1
+            [url] => https://4mma.ru/good/22128/
+            [old_price] => 0
+            [price] => 990
+            [categoryId] => 107
+            [picture] => /www/4mma.ru/frontend/web/media/images/16153229086047df1c51a125.80314400.temp.jpg
+            [store] => 1
+            [pickup] => 1
+            [name] => Кинезио тейп Rocktape Classic 5см×5м телесный
+            [vendor] => RockTape
+            [color] => Бежевый, Коричневый
+            [size] => no defined
+            [categoryes] => Аксессуары → Кинезио тейп|Аксессуары
+        )
+
+    [13] => Array
+        (
+            [good_id] => punglove015
+            [available] => 1
+            [url] => https://4mma.ru/good/26545/
+            [old_price] => 0
+            [price] => 4250
+            [categoryId] => 129
+            [picture] => /www/4mma.ru/frontend/web/media/images/167655673363ee39bd366286.13730784.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => МMA перчатки PunchTown Ryushin
+            [vendor] => PunchTown
+            [color] => Черный
+            [size] => S
+            [categoryes] => 
+        )
+
+    [14] => Array
+        (
+            [good_id] => boopan01
+            [available] => 1
+            [url] => https://4mma.ru/good/26628/
+            [price] => 3983
+            [old_price] => 5690
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 34
+            [picture] => /www/4mma.ru/frontend/web/media/images/1611688341601069957c9472.40935106.pr_10091_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Компрессионные штаны Booster Goblins Gbok And Zok
+            [vendor] => Booster
+            [color] => Желтый, Зеленый, Серый
+            [size] => L
+            [categoryes] => Одежда → Штаны → Компрессионные штаны|Одежда → Штаны|Одежда|Одежда → Штаны → Компрессионные штаны → Мужские компрессионные штаны|Одежда → Штаны → Компрессионные штаны|Одежда → Штаны|Одежда|Акционные товары
+        )
+
+    [15] => Array
+        (
+            [good_id] => vanrash08
+            [available] => 1
+            [url] => https://4mma.ru/good/27117/
+            [price] => 2093
+            [old_price] => 2990
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 4
+            [picture] => /www/4mma.ru/frontend/web/media/images/161168893560106be704b020.10157696.pr_10499_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Рашгард Vansydical Lightning
+            [vendor] => VANSYDICAL
+            [color] => синий с белым
+            [size] => L
+            [categoryes] => Одежда → Рашгарды → Длинный рукав|Одежда → Рашгарды|Одежда|Акционные товары
+        )
+
+    [16] => Array
+        (
+            [good_id] => virshorts032
+            [available] => 1
+            [url] => https://4mma.ru/good/27140/
+            [price] => 3423
+            [old_price] => 4890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 12
+            [picture] => /www/4mma.ru/frontend/web/media/images/161168896960106c09856b34.40280048.pr_14452_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женские шорты Virus Cool Jade ECO22
+            [vendor] => Virus
+            [color] => Синий
+            [size] => S
+            [categoryes] => Одежда → Шорты → Компрессионные шорты|Одежда → Шорты|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [17] => Array
+        (
+            [good_id] => smfshirt010
+            [available] => 1
+            [url] => https://4mma.ru/good/27752/
+            [price] => 2723
+            [old_price] => 3890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 3
+            [picture] => /www/4mma.ru/frontend/web/media/images/161168954760106e4bcb4432.83281035.pr_12142_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женская тренировочная майка Smmash Pride
+            [vendor] => Smmash
+            [color] => Фиолетовый, Черный
+            [size] => XS
+            [categoryes] => Одежда → Рашгарды|Одежда|Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [18] => Array
+        (
+            [good_id] => smfshirt011
+            [available] => 1
+            [url] => https://4mma.ru/good/27754/
+            [price] => 2723
+            [old_price] => 3890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 3
+            [picture] => /www/4mma.ru/frontend/web/media/images/161168955060106e4e4d7263.97658332.pr_12143_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женская тренировочная майка Smmash Indian
+            [vendor] => Smmash
+            [color] => Фиолетовый
+            [size] => S
+            [categoryes] => Одежда → Рашгарды|Одежда|Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [19] => Array
+        (
+            [good_id] => sknrash07
+            [available] => 1
+            [url] => https://4mma.ru/good/28617/
+            [price] => 6643
+            [old_price] => 9490
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 4
+            [picture] => /www/4mma.ru/frontend/web/media/images/161169050560107209898575.22082435.pr_13288_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Skins DNAmic Flamingo
+            [vendor] => Skins
+            [color] => no defined
+            [size] => S
+            [categoryes] => Одежда → Рашгарды → Длинный рукав|Одежда → Рашгарды|Одежда|Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [20] => Array
+        (
+            [good_id] => fnsrash02
+            [available] => 1
+            [url] => https://4mma.ru/good/28908/
+            [price] => 2723
+            [old_price] => 3890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 4
+            [picture] => /www/4mma.ru/frontend/web/media/images/161169081860107342657e12.14197159.pr_16166_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский лонгслив Fight Nights
+            [vendor] => Fight Nights
+            [color] => no defined
+            [size] => M
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Одежда → Рашгарды → Длинный рукав|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [21] => Array
+        (
+            [good_id] => hctrash0120
+            [available] => 1
+            [url] => https://4mma.ru/good/29316/
+            [price] => 3283
+            [old_price] => 4690
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 4
+            [picture] => /www/4mma.ru/frontend/web/media/images/16116912746010750a7654e2.11577167.pr_12514_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Hardcore Training MMArio
+            [vendor] => Hardcore Training
+            [color] => Синий
+            [size] => M
+            [categoryes] => Одежда → Рашгарды → Длинный рукав|Одежда → Рашгарды|Одежда|Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [22] => Array
+        (
+            [good_id] => swsafat018
+            [available] => 1
+            [url] => https://4mma.ru/good/29908/
+            [price] => 1883
+            [old_price] => 2690
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 108
+            [picture] => /www/4mma.ru/frontend/web/media/images/1611691842601077426418d0.43872393.pr_13363_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Термопояс Sweet Sweat
+            [vendor] => Sweet Sweat
+            [color] => no defined
+            [size] => Желтый
+            [categoryes] => Одежда → Костюм-сауна|Одежда|Акционные товары
+        )
+
+    [23] => Array
+        (
+            [good_id] => gambjjk03
+            [available] => 1
+            [url] => https://4mma.ru/good/30052/
+            [old_price] => 0
+            [price] => 16890
+            [categoryId] => 63
+            [picture] => /www/4mma.ru/frontend/web/media/images/161169203560107803ac4672.68536375.pr_19053_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Кимоно Gameness Air
+            [vendor] => Gameness
+            [color] => Белый
+            [size] => A4
+            [categoryes] => Экипировка → Кимоно → Кимоно для бразильского джиу-джитсу (BJJ)|Экипировка → Кимоно|Экипировка
+        )
+
+    [24] => Array
+        (
+            [good_id] => tatbjjbel03
+            [available] => 1
+            [url] => https://4mma.ru/good/30252/
+            [old_price] => 0
+            [price] => 1390
+            [categoryId] => 62
+            [picture] => /www/4mma.ru/frontend/web/media/images/161169255960107a0f1d57b7.22958174.pr_6749_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Детский пояс для БЖЖ Tatami
+            [vendor] => Tatami Fightwear
+            [color] => Желтый
+            [size] => M0
+            [categoryes] => Экипировка → Кимоно → Пояса для кимоно|Экипировка → Кимоно|Экипировка|Каталог → Для детей|Каталог
+        )
+
+    [25] => Array
+        (
+            [good_id] => rocfig023
+            [available] => 1
+            [url] => https://4mma.ru/good/33398/
+            [old_price] => 0
+            [price] => 1090
+            [categoryId] => 107
+            [picture] => /www/4mma.ru/frontend/web/media/images/162195116660ad02be12cde5.47808121.pr_10155_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Кинезио тейп RockTape 5*5 розовый
+            [vendor] => RockTape
+            [color] => no defined
+            [size] => no defined
+            [categoryes] => Аксессуары → Кинезио тейп|Аксессуары
+        )
+
+    [26] => Array
+        (
+            [good_id] => rocfig018
+            [available] => 1
+            [url] => https://4mma.ru/good/33401/
+            [old_price] => 0
+            [price] => 1090
+            [categoryId] => 107
+            [picture] => /www/4mma.ru/frontend/web/media/images/162195117160ad02c37bd840.66353055.pr_9991_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Кинезио тейп RockTape 5*5 Корова
+            [vendor] => RockTape
+            [color] => no defined
+            [size] => no defined
+            [categoryes] => Аксессуары → Кинезио тейп|Аксессуары
+        )
+
+    [27] => Array
+        (
+            [good_id] => mancap01
+            [available] => 1
+            [url] => https://4mma.ru/good/34527/
+            [price] => 1603
+            [old_price] => 2290
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 39
+            [picture] => /www/4mma.ru/frontend/web/media/images/1628280034610d94e2bc2070.57110568.pr_2073_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Шапка Manto White
+            [vendor] => Manto
+            [color] => Белый
+            [size] => no defined
+            [categoryes] => Одежда → Шапки|Одежда|Акционные товары
+        )
+
+    [28] => Array
+        (
+            [good_id] => leopaw021
+            [available] => 1
+            [url] => https://4mma.ru/good/35270/
+            [old_price] => 0
+            [price] => 12900
+            [categoryId] => 72
+            [picture] => /www/4mma.ru/frontend/web/media/images/1630353649612d38f15e7ef6.56661809.pr_20237_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Тренерская подушка Leone Power Line GM430
+            [vendor] => Leone
+            [color] => Черный
+            [size] => no defined
+            [categoryes] => Экипировка → Тренеру → Макивары(тайпэды)|Экипировка → Тренеру|Экипировка
+        )
+
+    [29] => Array
+        (
+            [good_id] => hctrash0259
+            [available] => 1
+            [url] => https://4mma.ru/good/37078/
+            [price] => 4389
+            [old_price] => 6270
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 6
+            [picture] => /www/4mma.ru/frontend/web/media/images/164028973061c4d5c24fd972.42021404.pr_20717_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Hardcore Training Sakura Pink
+            [vendor] => Hardcore Training
+            [color] => Розовый
+            [size] => xs
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [30] => Array
+        (
+            [good_id] => beffig08
+            [available] => 1
+            [url] => https://4mma.ru/good/38440/
+            [old_price] => 0
+            [price] => 280
+            [categoryId] => 118
+            [picture] => /www/4mma.ru/frontend/web/media/images/1649102531624b4ec3e3ea37.68946574.pr_18313_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Магнезия Be First
+            [vendor] => Be First
+            [color] => no defined
+            [size] => no difned
+            [categoryes] => Аксессуары → Прочее|Аксессуары
+        )
+
+    [31] => Array
+        (
+            [good_id] => undshirt027
+            [available] => 1
+            [url] => https://4mma.ru/good/38741/
+            [old_price] => 0
+            [price] => 3870
+            [categoryId] => 23
+            [picture] => /www/4mma.ru/frontend/web/media/images/1649275386624df1fa238931.73480174.pr_21013_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Тренировочная футболка Under Armour Tech 2
+            [vendor] => Under Armour
+            [color] => Серый
+            [size] => s
+            [categoryes] => Одежда → Футболки → Спортивные футболки|Одежда → Футболки|Одежда|Одежда → Футболки → Тренировочные футболки|Одежда → Футболки|Одежда
+        )
+
+    [32] => Array
+        (
+            [good_id] => smfshirt012
+            [available] => 1
+            [url] => https://4mma.ru/good/39312/
+            [price] => 2723
+            [old_price] => 3890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 3
+            [picture] => /www/4mma.ru/frontend/web/media/images/165080656162654f21557fd2.91671536.pr_12138_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женская тренировочная футболка Smmash Indian
+            [vendor] => Smmash
+            [color] => Фиолетовый
+            [size] => xs
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [33] => Array
+        (
+            [good_id] => hctrash0300
+            [available] => 1
+            [url] => https://4mma.ru/good/42937/
+            [price] => 4109
+            [old_price] => 5870
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 6
+            [picture] => /www/4mma.ru/frontend/web/media/images/170530993665a4f6f01369c5.20484293.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Hardcore Training Cow Camo LS
+            [vendor] => Hardcore Training
+            [color] => Белый, Черный
+            [size] => s
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+    [34] => Array
+        (
+            [good_id] => hctshorts0207
+            [available] => 1
+            [url] => https://4mma.ru/good/46088/
+            [price] => 3423
+            [old_price] => 4890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 12
+            [picture] => /www/4mma.ru/frontend/web/media/images/168232140064462ff8c89b33.82084194.pr_22173_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Компрессионные шорты Hardcore Training Heraldry Blue
+            [vendor] => Hardcore Training
+            [color] => Голубой, Синий
+            [size] => s
+            [categoryes] => Одежда → Шорты → Компрессионные шорты|Одежда → Шорты|Одежда|Акционные товары
+        )
+
+    [35] => Array
+        (
+            [good_id] => hctshorts0205
+            [available] => 1
+            [url] => https://4mma.ru/good/46096/
+            [price] => 3423
+            [old_price] => 4890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 12
+            [picture] => /www/4mma.ru/frontend/web/media/images/168232140364462ffbbe18f5.63129375.pr_22157_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Компрессионные шорты Hardcore Training Heraldry Magenta
+            [vendor] => Hardcore Training
+            [color] => Темно-фиолетовый, Фиолетовый
+            [size] => xl
+            [categoryes] => Одежда → Шорты → Компрессионные шорты|Одежда → Шорты|Одежда|Акционные товары
+        )
+
+    [36] => Array
+        (
+            [good_id] => rocfig061
+            [available] => 1
+            [url] => https://4mma.ru/good/46251/
+            [old_price] => 0
+            [price] => 1090
+            [categoryId] => 107
+            [picture] => /www/4mma.ru/frontend/web/media/images/1684962490646e7cbaaf9644.51289108.pr_22265_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Кинезио тейп RockTape 5*5 Розовый Камуфляж
+            [vendor] => RockTape
+            [color] => Камуфляж, Розовый
+            [size] => no difned
+            [categoryes] => Аксессуары → Кинезио тейп|Аксессуары
+        )
+
+    [37] => Array
+        (
+            [good_id] => hayshorts0177
+            [available] => 1
+            [url] => https://4mma.ru/good/46309/
+            [old_price] => 0
+            [price] => 11890
+            [categoryId] => 12
+            [picture] => /www/4mma.ru/frontend/web/media/images/16861721216480f1d9c11b60.52472632.pr_22211_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женские шорты Hayabusa Mid Rise Layered Shorts
+            [vendor] => Hayabusa
+            [color] => Оливковый
+            [size] => s
+            [categoryes] => Одежда → Шорты → Компрессионные шорты|Одежда → Шорты|Одежда|Каталог → Для девушек|Каталог
+        )
+
+    [38] => Array
+        (
+            [good_id] => grhsamsho01
+            [available] => 1
+            [url] => https://4mma.ru/good/46849/
+            [old_price] => 0
+            [price] => 790
+            [categoryId] => 194
+            [picture] => /www/4mma.ru/frontend/web/media/images/168988728864b9a238487b59.72018216.pr_22386_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Шорты для самбо Green Hill Мастер Red
+            [vendor] => Green Hill
+            [color] => Красный
+            [size] => 60
+            [categoryes] => 
+        )
+
+    [39] => Array
+        (
+            [good_id] => grhfig01
+            [available] => 1
+            [url] => https://4mma.ru/good/47581/
+            [old_price] => 0
+            [price] => 990
+            [categoryId] => 118
+            [picture] => /www/4mma.ru/frontend/web/media/images/169394811864f798d6c28324.11058185.pr_22694_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Жимовые перчатки Green Hill WLG-6400
+            [vendor] => Green Hill
+            [color] => Черный
+            [size] => s
+            [categoryes] => Аксессуары → Прочее|Аксессуары
+        )
+
+    [40] => Array
+        (
+            [good_id] => grhfig02
+            [available] => 1
+            [url] => https://4mma.ru/good/47585/
+            [old_price] => 0
+            [price] => 690
+            [categoryId] => 118
+            [picture] => /www/4mma.ru/frontend/web/media/images/169394811964f798d7436005.86323803.pr_22695_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Жимовые перчатки Green Hill WLG-6406
+            [vendor] => Green Hill
+            [color] => Черный
+            [size] => m
+            [categoryes] => Аксессуары → Прочее|Аксессуары
+        )
+
+    [41] => Array
+        (
+            [good_id] => vmtrash014
+            [available] => 1
+            [url] => https://4mma.ru/good/48070/
+            [old_price] => 0
+            [price] => 8450
+            [categoryId] => 3
+            [picture] => /www/4mma.ru/frontend/web/media/images/170540356965a664b1542f68.51189284.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Комплект женского термобелья V-Motion F10 Изумрудный
+            [vendor] => V-Motion
+            [color] => изумрудный
+            [size] => m
+            [categoryes] => Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог
+        )
+
+    [42] => Array
+        (
+            [good_id] => tyrshorts02
+            [available] => 1
+            [url] => https://4mma.ru/good/48542/
+            [old_price] => 0
+            [price] => 3399
+            [categoryId] => 12
+            [picture] => /www/4mma.ru/frontend/web/media/images/169705853965270eeb2fcc38.20213923.pr_22828_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женские гибридные шорты-юбка Tyr Solid Della Skort 001
+            [vendor] => Tyr
+            [color] => Черный
+            [size] => xs
+            [categoryes] => Одежда → Шорты → Компрессионные шорты|Одежда → Шорты|Одежда|Каталог → Для девушек|Каталог
+        )
+
+    [43] => Array
+        (
+            [good_id] => vmtrash01
+            [available] => 1
+            [url] => https://4mma.ru/good/49239/
+            [old_price] => 0
+            [price] => 14900
+            [categoryId] => 409
+            [picture] => /www/4mma.ru/frontend/web/media/images/1702674500657cc044e44d62.04980573.pr_22830_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Комплект женского термобелья V-Motion Alpinesports ASW Черно-красный
+            [vendor] => V-Motion
+            [color] => no defined
+            [size] => m
+            [categoryes] => Одежда → Термобелье|Одежда|Каталог → Для девушек|Каталог
+        )
+
+    [44] => Array
+        (
+            [good_id] => vmtrash013
+            [available] => 1
+            [url] => https://4mma.ru/good/49259/
+            [old_price] => 0
+            [price] => 8450
+            [categoryId] => 409
+            [picture] => /www/4mma.ru/frontend/web/media/images/1702674521657cc05938bf01.59161774.pr_22843_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Комплект женского термобелья V-Motion F10 Черный
+            [vendor] => V-Motion
+            [color] => no defined
+            [size] => m
+            [categoryes] => Одежда → Термобелье|Одежда|Каталог → Для девушек|Каталог
+        )
+
+    [45] => Array
+        (
+            [good_id] => hctshorts0225
+            [available] => 1
+            [url] => https://4mma.ru/good/49350/
+            [price] => 3703
+            [old_price] => 5290
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 12
+            [picture] => /www/4mma.ru/frontend/web/media/images/17032793086585facc489728.56968598.pr_23106_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Компрессионные шорты Hardcore Training Heraldry Brown
+            [vendor] => Hardcore Training
+            [color] => Коричневый
+            [size] => xs
+            [categoryes] => Одежда → Шорты → Компрессионные шорты|Одежда → Шорты|Одежда|Акционные товары
+        )
+
+    [46] => Array
+        (
+            [good_id] => faiglove033
+            [available] => 1
+            [url] => https://4mma.ru/good/49637/
+            [old_price] => 0
+            [price] => 9970
+            [categoryId] => 47
+            [picture] => /www/4mma.ru/frontend/web/media/images/170509369665a1aa401e5ac4.01304916.pr_22540_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Перчатки Fairtex FGV15
+            [vendor] => Fairtex
+            [color] => Черный
+            [size] => l
+            [categoryes] => Экипировка → Перчатки → Перчатки ММА|Экипировка → Перчатки|Экипировка
+        )
+
+    [47] => Array
+        (
+            [good_id] => venshorts0437-4687126
+            [available] => 1
+            [url] => https://4mma.ru/good/50034/
+            [price] => 3423
+            [old_price] => 4890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 9
+            [picture] => /www/4mma.ru/frontend/web/media/images/170867931365d860911e2186.51301963.pr_23322_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Детские шорты Venum Razor Black/Gold
+            [vendor] => Venum
+            [color] => Черный
+            [size] => 8лет
+            [categoryes] => Одежда → Шорты → Шорты ММА → Детские шорты|Одежда → Шорты → Шорты ММА|Одежда → Шорты|Одежда|Одежда → Шорты → Шорты ММА|Одежда → Шорты|Одежда|Каталог → Для детей|Каталог|Акционные товары
+        )
+
+    [48] => Array
+        (
+            [good_id] => venshorts0434-4263108
+            [available] => 1
+            [url] => https://4mma.ru/good/50072/
+            [price] => 5453
+            [old_price] => 7790
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 8
+            [picture] => /www/4mma.ru/frontend/web/media/images/170982289065e9d3aa3a7b07.03847004.temp.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Шорты Venum Light 4.0 Black/White
+            [vendor] => Venum
+            [color] => Черный
+            [size] => l
+            [categoryes] => Одежда → Шорты|Одежда|Акционные товары
+        )
+
+    [49] => Array
+        (
+            [good_id] => venshorts0435-5011040
+            [available] => 1
+            [url] => https://4mma.ru/good/50074/
+            [price] => 5523
+            [old_price] => 7890
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 9
+            [picture] => /www/4mma.ru/frontend/web/media/images/170867933465d860a669df00.67569952.pr_23334_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Шорты Venum G-Fit Air Sand
+            [vendor] => Venum
+            [color] => Бежевый
+            [size] => s
+            [categoryes] => Одежда → Шорты → Шорты ММА|Одежда → Шорты|Одежда|Акционные товары
+        )
+
+    [50] => Array
+        (
+            [good_id] => venshorts0438-4694100
+            [available] => 1
+            [url] => https://4mma.ru/good/50080/
+            [price] => 5383
+            [old_price] => 7690
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 15
+            [picture] => /www/4mma.ru/frontend/web/media/images/170867933665d860a8b59bc3.42230418.pr_23335_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Боксёрские шорты Venum Phantom Black/Red
+            [vendor] => Venum
+            [color] => Черный
+            [size] => l
+            [categoryes] => Акционные товары
+        )
+
+    [51] => Array
+        (
+            [good_id] => venshorts0436-4679126
+            [available] => 1
+            [url] => https://4mma.ru/good/50082/
+            [price] => 5383
+            [old_price] => 7690
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 15
+            [picture] => /www/4mma.ru/frontend/web/media/images/170867933865d860aac35c01.46187011.pr_23336_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Боксёрские шорты Venum Razor Black/Gold
+            [vendor] => Venum
+            [color] => Черный
+            [size] => m
+            [categoryes] => Акционные товары
+        )
+
+    [52] => Array
+        (
+            [good_id] => ventshorts039-5068002
+            [available] => 1
+            [url] => https://4mma.ru/good/50317/
+            [old_price] => 0
+            [price] => 8490
+            [categoryId] => 13
+            [picture] => /www/4mma.ru/frontend/web/media/images/170867947365d861315ada09.92094391.pr_23412_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женские шорты для тайского бокса Venum White Snake
+            [vendor] => Venum
+            [color] => Белый
+            [size] => m
+            [categoryes] => Одежда → Шорты → Тайские шорты|Одежда → Шорты|Одежда|Каталог → Для девушек|Каталог|Новинки
+        )
+
+    [53] => Array
+        (
+            [good_id] => hctrash0258
+            [available] => 1
+            [url] => https://4mma.ru/good/50556/
+            [price] => 4389
+            [old_price] => 6270
+            [discount] => -30% на тренировочную и повседневную одежду*
+            [categoryId] => 6
+            [picture] => /www/4mma.ru/frontend/web/media/images/170984562765ea2c7bd3abd1.65493788.pr_20715_1.png
+            [store] => 1
+            [pickup] => 1
+            [name] => Женский рашгард Hardcore Training Sakura Blue
+            [vendor] => Hardcore Training
+            [color] => Голубой
+            [size] => xs
+            [categoryes] => Одежда → Рашгарды → Женские рашгарды|Одежда → Рашгарды|Одежда|Каталог → Для девушек|Каталог|Акционные товары
+        )
+
+)

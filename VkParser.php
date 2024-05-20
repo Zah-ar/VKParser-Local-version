@@ -26,6 +26,7 @@ class VkParser extends VkParserApi
 
     const TIMEOUT = 5;
     const MAX_ALBUMS = 99;
+    public $updatCategory;
 
     public function Init()
     {
@@ -44,6 +45,7 @@ class VkParser extends VkParserApi
         $this->useNotes          = false; 
         $this->albumCovers       = false;
         $this->promoPosts        = [];
+        $this->updatCategory    = false;
         $this->Router->init('https://api.vk.com/method/', $this->ACCESS_TOKEN, $this->GROUP_ID, $this->OWNER_ID, $this->utm);
         return;
     }
@@ -121,6 +123,8 @@ class VkParser extends VkParserApi
         }
             if(is_array($this->vkAlbums))
             {
+                if($this->updatCategory == false)
+                {
                 //Удаление старых альбомов
                 if(!$this->goodCategoryes)
                 {
@@ -149,6 +153,8 @@ class VkParser extends VkParserApi
                                 }
                              }  
                     }
+                    
+                }
             }
             if($this->goodCategoryes)
             {
@@ -420,7 +426,7 @@ class VkParser extends VkParserApi
                 {
                     foreach ($updateGoods as $good)
                     {
-                           
+                        //if($good['good_id'] != 'hctshorts0218') continue;
                         $result = [];
                         $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'UPDATE_GOODS');
                             if(!$goodData)
@@ -436,7 +442,7 @@ class VkParser extends VkParserApi
                         call_user_func($this->userClass.'::'.$this->endpoint, $result);
                         sleep(\common\components\VkParser\VKParser::TIMEOUT);
                     }
-                }    
+                }
                 $createGoods = $this->getGoodsCreate($this->goods);
                 if(count($createGoods) > 0)    
                 {
@@ -446,6 +452,10 @@ class VkParser extends VkParserApi
                         {
                             continue;
                         }
+                       /* if($good['good_id'] != 'fnsrash02')
+                        {
+                            continue;
+                        }*/
                         $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'CREATE_GOODS');
                         $itemID = $this->Router->sendGood($this, $good, $goodData,'CREATE_GOODS');
                             if(is_int($itemID))
@@ -479,6 +489,55 @@ class VkParser extends VkParserApi
                 
        $this->Router->sendNotes($this);             
         return $result;
+    }
+    public function deleteGoodsByCategory($goods)
+    {
+        if(count($goods) == 0) return;
+        $result = [];
+            foreach($goods as $good)
+            {
+                $this->Router->deleteGood($this, $good);
+                $result['action'] = 'DELETE_GOODS';
+                $result['good_id'] = $good;
+                $result['shop_id'] =  $this->GROUP_ID;
+                call_user_func($this->userClass.'::'.$this->endpoint, $result);
+                sleep(\common\components\VkParser\VKParser::TIMEOUT);
+  
+            }
+        return;
+    }
+    public function sendGoodByCategory()
+    {
+        if(count($this->goods) == 0) return;
+        $this->initGoods($goodIDs);
+            foreach($this->goods as $good)
+            {
+
+                if(!array_key_exists('good_id', $good))
+                {
+                    continue;
+                }
+               /* if($good['good_id'] != 'fnsrash02')
+                {
+                    continue;
+                }*/
+                $goodData = $this->VkGoodFormater->getGoodAnsw($this->existGoodsItemids, $this->Router, $good, $this->GROUP_ID, $this->OWNER_ID, $this->ACCESS_TOKEN, $this->description, 'CREATE_GOODS');
+                $itemID = $this->Router->sendGood($this, $good, $goodData,'CREATE_GOODS');
+
+                    if(is_int($itemID))
+                    {
+                        $result= [];
+                        $hash = $this->getHash($good, $this->description, $this->utm);
+                        $result['action'] = 'CREATE_GOODS';
+                        $result['good_id'] =  $good['good_id'];
+                        $result['hash']    =  $hash;
+                        $result['shop_id'] =  $this->GROUP_ID;
+                        $result['item_id'] =  $itemID;
+                        call_user_func($this->userClass.'::'.$this->endpoint, $result);
+                    }
+                sleep(\common\components\VkParser\VKParser::TIMEOUT);
+            }
+        return;
     }
     public function sendNotes()
     {

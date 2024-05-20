@@ -1,8 +1,0 @@
-Array
-(
-    [response] => Array
-        (
-            [upload_url] => https://pu.vk.com/c537236/ss2258/upload.php?_query=eyJhY3QiOiJtYXJrZXRfYWxidW0iLCJnaWQiOjIyMzg3NjE0OSwiYWlkIjotNTMsImFwaV91cGxvYWQiOjEsImFwaV93cmFwIjp7InNlcnZlciI6OTk5LCJwaG90byI6IntyZXN1bHR9IiwiZ2lkIjoyMjM4NzYxNDksImhhc2giOiI3ZjQ5YWNhZjc3ZGY0ZTY0YzcyNDUxNzlhZDY3ZjNmMCJ9LCJtaWQiOjc4OTAxMiwic2VydmVyIjo1MzcyMzYsIl9vcmlnaW4iOiJodHRwczpcL1wvYXBpLnZrLmNvbSIsIl9zaWciOiJjZDA2Nzg0ODkzZDE0MjZiNmM1MzE5MjRjZjRiYmMwZCJ9
-        )
-
-)

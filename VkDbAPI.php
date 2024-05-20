@@ -73,6 +73,7 @@ abstract class VkDbAPI extends Loger
         {
            return $goods;
          }
+       // file_put_contents(__DIR__.'/existGoods.txt', print_r($this->existGoods,true));
          $craeteGoods = []; 
          foreach($goods as $good)      
          {

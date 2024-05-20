@@ -172,14 +172,14 @@ class Router extends Loger
     public function sendGood($VKParser, $good, $goodData, $action)
     {
         $albums = $this->getGoodCategoryes($VKParser, $good);
-        //file_put_contents(__DIR__.'/log/good_'.$good['good_id'].'.txt', print_r($albums, true));
+        //print_r($albums);
         $this->sended   = true;
         $sumbarket = 'add';
             if($action == 'UPDATE_GOODS')
             {
                 $sumbarket = 'edit';
             }
-        $cnt = 0;   
+            $cnt = 0;   
 
             $url = $this->VK_URL.'market.'.$sumbarket.'/?access_token='.$this->ACCESS_TOKEN.'&v=5.131&owner_id='.$this->OWNER_ID.'&'. $goodData; 
             $arrContextOptions = array(
@@ -190,6 +190,7 @@ class Router extends Loger
             );
             $json_html = file_get_contents($url, false, stream_context_create($arrContextOptions));
             $json = json_decode($json_html, true);
+            //if($good['good_id'] == 'fnsrash02') print_r($good. true);
                 if(array_key_exists('error', $json))
                 {
                     $this->setLog('[Error] '.print_r($json['error'],true));
@@ -228,6 +229,7 @@ class Router extends Loger
     }
     public function deleteGood($VKParser,$good)
     {
+        if(!is_array($VKParser->existGoodsItemids)) return;
         if(!array_key_exists($good, $VKParser->existGoodsItemids)) return;
         $item_id =  $VKParser->existGoodsItemids[$good];
         $VKParser->deleteFromArray($good);
