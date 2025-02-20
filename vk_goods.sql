@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Мар 05 2024 г., 10:48
+-- Время создания: Май 29 2024 г., 12:01
 -- Версия сервера: 10.1.48-MariaDB-0+deb9u2
 -- Версия PHP: 7.1.14
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `test_4mma`
+-- База данных: `4mma_prod`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `vk_goods` (
   `id` int(11) NOT NULL,
-  `good_id` varchar(20) DEFAULT NULL,
+  `good_id` varchar(50) DEFAULT NULL,
   `hash` text NOT NULL,
   `shop_id` int(11) DEFAULT NULL,
   `item_id` int(11) DEFAULT NULL
